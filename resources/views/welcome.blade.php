@@ -49,7 +49,7 @@
 </head>
 <body>
 <header>
-    @include('nav-bar');
+    @include('nav-bar')
 </header>
 <div class="grid">
     <div class="grid-item">
