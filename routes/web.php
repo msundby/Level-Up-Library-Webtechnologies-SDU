@@ -22,6 +22,10 @@ Route::get('/home', function () {
     return view('welcome');
 });
 
+Route::get('/browse', function () {
+    return view('browse');
+});
+
 Route::get('/nav-bar-test', function () {
     return view('nav-bar');
 });
