@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('game_id');
             $table->string('name');
             $table->string('description');
+            $table->string('image-link');
             $table->float('aggregate_rating');
             $table->date('release_date');
             $table->timestamps(); //Automatically creates a 'created on' and 'updated-at'

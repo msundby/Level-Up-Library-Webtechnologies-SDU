@@ -24,6 +24,7 @@ class GameFactory extends Factory
         return [
             'name' => fake()->name,
             'description' => fake()->paragraph,
+            'image-link'=> 'https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt232a8ff06bf93ebd/63eeb1546495981254659630/Valorant_2022_EP6-1_PlayVALORANT_ContentStackThumbnail_1200x625_MB01.png',
             'aggregate_rating' => fake()->randomFloat(2, 1, 10),
             'release_date' => fake()->date
         ];
