@@ -20,19 +20,14 @@ class Review extends Model
     }
 
     protected $table = "reviews";
-
     protected $primaryKey = 'review_id';
 
     public function game(): BelongsTo {
-        {
             return $this->belongsTo(Game::class, 'game_id', 'game_id');
-        }
     }
 
     public function user(): BelongsTo {
-        {
             return $this->belongsTo(User::class, 'user_id', 'user_id');
-        }
     }
 
 //    protected $attributes = [

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('review_id');
             $table->integer('user_id');
             $table->integer('game_id');
-            $table->foreign('user_id')->references('user_id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('game_id')->references('game_id')->on('games');
             $table->string('description');
             $table->float('rating');
@@ -23,6 +23,8 @@ return new class extends Migration
 
         });
     }
+
+
 
     /**
      * Reverse the migrations.
