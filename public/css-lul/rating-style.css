@@ -1,0 +1,124 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #e5e5f7;
+    opacity: 87%;
+    background-image: radial-gradient( ellipse farthest-corner at 10px 10px , #d8d9eb, #d8d9eb 50%, #e5e5f7 50%);
+    background-size: 10px 10px;
+}
+
+.write_review {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    background-color: #EFF2F1;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    box-sizing: border-box;
+}
+
+.rating_section {
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    width: 50%;
+}
+
+
+#submit_form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-width: 200px;
+    margin-bottom: 0%;
+}
+
+#review_submit {
+    display: flex;
+    margin: 10% auto;
+    width: 60px;
+}
+
+
+
+
+.review_form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.review_form p {
+    margin-bottom: 0%;
+}
+
+#content {
+    /* for some reason this text area has to be manually display flex */
+    resize: none;
+    display: flex;
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-left: 2%;
+    margin-top: 3%;
+}
+
+.headline_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.headline_text h3 span {
+    color: #7353BA;
+}
+
+.headline_image {
+}
+
+.headline_image img {
+    width: 100%;
+    border: black inset 2px;
+    box-shadow: 2px 2px;
+}
+
+
+/* other reviews*/
+
+.other_reviews {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+
+.headline_text h2 {
+    margin: 5% 0;
+}
+
+.headline_text h3 {
+    margin: 5% 0 5% 0;
+}
+
+
+.red_highlight {
+    color: red;
+}
