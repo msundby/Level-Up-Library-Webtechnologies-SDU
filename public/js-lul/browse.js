@@ -11,6 +11,12 @@ async function createGameElements(){
     fetchedGames.forEach((game) => {
         const gameContainer = document.createElement('article');
         gameContainer.id = 'game';
+
+        gameContainer.addEventListener('click', () => {
+            // Redirect to the game page with the specific ID
+            window.location.href = `/gamepage/${game.game_id}`;
+        });
+
         const image = document.createElement('img')
         image.id = 'img';
         const name = document.createElement('h3');
@@ -25,7 +31,7 @@ async function createGameElements(){
         const span4 = document.createElement('span');
         const span5 = document.createElement('span');
 
-        image.src = ('https://images.hindustantimes.com/tech/img/2023/09/06/960x540/Baldur_Gate_3_1694006233080_1694006237849.jpg')
+        image.src = game['image-link'];
         name.textContent = game.name;
         description.textContent = game.description;
         rating.textContent = game.aggregate_rating;

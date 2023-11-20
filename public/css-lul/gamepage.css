@@ -1,0 +1,168 @@
+body {
+    background-image: url("img/lul-page-background2.jpg");
+    background-size: auto;
+    background-position: center;
+    color: #f67b00;
+    margin: 0;
+    padding: 0;
+    font-family: "Tahoma", sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #e5e5f7;
+    opacity: 87%;
+    background-image: radial-gradient( ellipse farthest-corner at 10px 10px , #d8d9eb, #d8d9eb 50%, #e5e5f7 50%);
+    background-size: 10px 10px;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.container {
+}
+
+.primary-header {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+}
+
+
+.container2 {
+    width: min(90%, 60rem);
+    margin-inline: auto;
+    padding: max(3vh, 1rem);
+    background-color: #1D1128;
+    opacity: 90%;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+}
+
+.game-container-header {
+    padding-top: 4rem;
+    width: 100%;
+    height: clamp(10rem, 15rem, 30vh);
+    background-image: url("resources/starfield-cover-image.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 60%;
+    box-shadow: 0 0 8px 8px #1D1128 inset;
+}
+
+.game-info-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-description {
+
+
+}
+
+.game-publisher {
+    margin-bottom: 1rem;
+}
+
+.release-date {
+    margin-bottom: 1rem;
+}
+
+.game-info-left {
+    width: 70%;
+    margin-bottom: 1rem;
+}
+
+.game-image {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    width: 30%;
+    max-width: 15rem;
+}
+
+#game-image {
+    border-radius: 0.3rem;
+}
+
+
+
+.game-title {
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    font-size: clamp(1rem, 2vw + 1rem, 2.5rem);
+    border-bottom: 0.05rem solid #FA7921;
+    line-height: 1em;
+    margin-bottom: 0.2rem;
+    margin-top: 1rem;
+}
+
+.game-tags ul {
+    padding-left: 0;
+    font-size: 0.8rem;
+    color: #5a5d5d;
+}
+
+.game-tags ul li {
+    display: inline-block;
+    margin-right: 0.8rem;
+
+}
+
+.review-box {
+    background: #5a5d5d;
+    color: #EFF2F1;
+    border-radius: 0.3rem;
+    opacity: 85%;
+
+    padding: max(3vh, 1rem);
+}
+
+.review-box ul {
+    padding-left: 0;
+}
+
+.review-box ul li {
+    border: 0.1rem solid #EFF2F1;
+    background-color: #808383;
+    list-style-type: none;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.read-more-button {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.9em;
+    text-align: center;
+    margin: auto;
+    display: block;
+    background-color: #FA7921;
+    color: #EFF2F1;
+    border-style: none;
+    padding: 0.8rem;
+    border-radius: 0.2rem;
+}
+
+.review-page-button {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.9em;
+    text-align: center;
+    margin: auto;
+    display: block;
+    background-color: #FA7921;
+    color: #EFF2F1;
+    border-style: none;
+    padding: 0.8rem;
+    border-radius: 0.2rem;
+}
+
+button:hover{
+    box-shadow: inset 1px 2px 2px #f88d44;
+    color: #ffffff;
+    opacity: 90%;
+    cursor: pointer;
+}

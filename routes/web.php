@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\GameController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TestingController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,17 +21,37 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/games', [GameController::class, 'index']);
+
+Route::get('/gamepage/{id}', [GameController::class,'show']);
+
+//Route::get('/gamepage/{id}', function() {
+//    return view('gamepage');
+//});
+
+
+
 Route::get('/home', function () {
     return view('welcome');
+});
+
+Route::get('/test', function() {
+    $user = DB::select("select * from users");
+    dd($user);
 });
 
 Route::get('/browse', function () {
     return view('browse');
 });
 
+Route::get('/games',[GameController::class,'index']);
+
 Route::get('/nav-bar-test', function () {
     return view('nav-bar');
 });
+
+Route::get('/testing', [TestingController::class, 'showReviewByAuthenticatedUser']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
