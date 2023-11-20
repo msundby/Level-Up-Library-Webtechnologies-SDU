@@ -9,6 +9,8 @@ class ReviewController extends Controller
 {
     //php artisan make:controller ReviewController
     function index() {
+        //Returnerer stadig et array, selvom der er 1 hit
+        return DB::select('select * from users where name = :name', ['name' => 'Mathias']);
         //return DB::select('select * from users');
         //return "Hello from profile controller!";
     }
