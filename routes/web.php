@@ -59,6 +59,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('review', [ReviewController::class, 'index']);
+Route::post('review', [ReviewController::class, 'insertion']);
 
 Route::view('/rating','rating-page');
 /*

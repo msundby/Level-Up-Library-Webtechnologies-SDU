@@ -17,9 +17,10 @@
         <div class="write_review">
             <div class="rating_section">
                 <div class="review_form">
-                    <form id="submit_form">
+                    <form id="submit_form" action="review" method="POST">
+                    @csrf
                         <p>Title</p>
-                        <input type="text" id="platform" name="title">
+                        <input type="text" id="title" name="title">
                         <p>Platform</p>
                         <select id="platform" name="platform">
                             <option value="PS4">PS4</option>
@@ -29,9 +30,7 @@
                             <option value="PC">PC</option>
                         </select>
                         <p>Content</p>
-                        <textarea id="content" name="content" rows="8">
-
-                        </textarea>
+                        <input id="content" type="text" name="content">
                         <p>Score<span class="red_highlight">*</span></p>
                         <select id="score" name="score">
                             <option value="1">1</option>
@@ -40,7 +39,7 @@
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
-                        <input id="review_submit" type="submit" value="Submit" onclick="test();">
+                        <input id="review_submit" type="submit" value="Submit">
                       </form>
                 </div>
             </div>
@@ -54,8 +53,7 @@
                 </div>
             </div>
         </div>
-        <div class="other_reviews">
-            <p id="test">Test!</p>
+        <div id="other_reviews" style="justify-content: center; text-align: center;">
         </div>
     </body>
 </html>
