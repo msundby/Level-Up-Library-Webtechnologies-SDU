@@ -4,9 +4,9 @@ async function test () {
     const reviewDiv = document.getElementById('other_reviews');
     console.log(data);
     data.forEach((e) => {
-        console.log(e.description);
+        console.log(e.title);
         const reviewDesc = document.createElement('p');
-        reviewDesc.textContent = e.description;
+        reviewDesc.textContent = e.title;
         reviewDiv.appendChild(reviewDesc);
     })
 }
