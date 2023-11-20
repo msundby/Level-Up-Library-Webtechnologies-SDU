@@ -31,7 +31,7 @@ class ReviewController extends Controller
         $content = $req->get('content');
         $score = $req->get('score');
         DB::insert('insert into test_table (title, platform, content, score) values (?, ?, ?, ?)', [$title, $platform, $content, $score]);
-        return redirect('http://127.0.0.1:8000/rating');
+        return view('rating-page');
 
     }
 }
