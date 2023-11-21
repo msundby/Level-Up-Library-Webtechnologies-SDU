@@ -30,7 +30,9 @@ Route::get('/gamepage/{id}', [GameController::class,'show']);
 //    return view('gamepage');
 //});
 
-
+Route::get('/loginForm', function(){
+    return view('loginForm');
+});
 
 Route::get('/home', function () {
     return view('welcome');
