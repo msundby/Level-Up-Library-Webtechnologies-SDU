@@ -6,7 +6,7 @@ use App\Http\Controllers\TestingController;
 use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\DashboardController;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -64,9 +64,9 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
 
 
 Route::view('/rating', 'rating-page');
-Route::get('/review', [ReviewController::class, 'index']);
-Route::post('/review', [ReviewController::class, 'something']);
-
+Route::get('/review', [ReviewController::class, 'fetchAll']);
+Route::post('/review', [ReviewController::class, 'insertOne']);
+Route::get('/review/{userid}', [ReviewController::class, 'fetchFromID']);
 
 
 Route::middleware('auth')->group(function () {

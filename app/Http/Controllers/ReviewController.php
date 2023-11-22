@@ -5,23 +5,26 @@ namespace App\Http\Controllers;
 use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class ReviewController extends Controller
 {
     //
-    function index()
+    function fetchAll()
     {
-        return DB::select('select * FROM test_table');
+        return DB::select('select * FROM reviews');
     }
-    function fetchAll() {
-        Review::all();
-    }
-    function something(Request $request) {
+    function insertOne(Request $request) {
+        $user_id = Auth::id();
+        $game_id = 1;
         $title = $request->get('title');
         $platform = $request->get('platform');
         $content = $request->get('content');
         $rating = $request->get('rating');
-        DB::insert('insert into test_table (title, platform, content, rating) values (?, ?, ?, ?)', [$title, $platform, $content, $rating]);
+        DB::insert('insert into reviews (user_id, game_id, title, platform, content, rating) values (?, ?, ?, ?, ?, ?)', [$user_id, $game_id, $title, $platform, $content, $rating]);
         return $request;
+    }
+    function fetchFromID($userid) {
+        return DB::select('select * from reviews where user_id = :user_id', ['user_id' => $userid]);
     }
 }
