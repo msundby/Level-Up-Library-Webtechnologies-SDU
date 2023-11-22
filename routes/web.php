@@ -5,6 +5,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestingController;
 use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\DashboardController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -53,11 +55,13 @@ Route::get('/nav-bar-test', function () {
     return view('nav-bar');
 });
 
+
 Route::get('/testing', [TestingController::class, 'showReviewByAuthenticatedUser']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
+
 
 Route::view('/rating', 'rating-page');
 Route::get('/review', [ReviewController::class, 'index']);
