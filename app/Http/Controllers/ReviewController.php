@@ -15,14 +15,14 @@ class ReviewController extends Controller
         return DB::select('select * FROM reviews');
     }
     function insertOne(Request $request) {
-        $user_id = Auth::id();
+        $user_id = auth()->user()->id;
         $game_id = 1;
         $title = $request->get('title');
         $platform = $request->get('platform');
         $content = $request->get('content');
         $rating = $request->get('rating');
         DB::insert('insert into reviews (user_id, game_id, title, platform, content, rating) values (?, ?, ?, ?, ?, ?)', [$user_id, $game_id, $title, $platform, $content, $rating]);
-        return $request;
+        return $title;
     }
     function fetchFromID($userid) {
         return DB::select('select * from reviews where user_id = :user_id', ['user_id' => $userid]);
