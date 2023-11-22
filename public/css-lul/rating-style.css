@@ -102,7 +102,7 @@ body{
 
 /* other reviews*/
 
-    .other_reviews {
+    #other_reviews {
         padding-left: 10%;
         padding-right: 10%;
         display: flex;

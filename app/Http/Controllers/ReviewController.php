@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -11,6 +12,9 @@ class ReviewController extends Controller
     function index()
     {
         return DB::select('select * FROM test_table');
+    }
+    function fetchAll() {
+        Review::all();
     }
     function something(Request $request) {
         $title = $request->get('title');

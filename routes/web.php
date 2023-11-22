@@ -25,7 +25,7 @@ Route::get('/', function () {
 
 Route::get('/games', [GameController::class, 'index']);
 
-Route::get('/gamepage/{id}', [GameController::class,'show']);
+Route::get('/gamepage/{name}', [GameController::class,'show']);
 
 //Route::get('/gamepage/{id}', function() {
 //    return view('gamepage');
@@ -47,6 +47,7 @@ Route::get('/browse', function () {
 });
 
 Route::get('/games',[GameController::class,'index']);
+Route::get('/all-reviews',[ReviewController::class,'fetchAll']);
 
 Route::get('/nav-bar-test', function () {
     return view('nav-bar');

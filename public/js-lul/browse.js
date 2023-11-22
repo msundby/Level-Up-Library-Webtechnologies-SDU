@@ -14,7 +14,7 @@ async function createGameElements(){
 
         gameContainer.addEventListener('click', () => {
             // Redirect to the game page with the specific ID
-            window.location.href = `/gamepage/${game.game_id}`;
+            window.location.href = `/gamepage/${game.name}`;
         });
 
         const image = document.createElement('img')
