@@ -5,6 +5,7 @@
     <title>Level Up Library</title>
     <link rel="stylesheet" href="{{ asset('css-lul/gamepage.css') }}">
     <script src="https://kit.fontawesome.com/e7bbbc0c8d.js" crossorigin="anonymous"></script>
+    <script defer src="{{ asset('js-lul/game-page-script.js') }}"></script>
 </head>
 <body>
     <header>
@@ -49,7 +50,7 @@
                 <li>MrGameAficionado:</li>
                 <li>FourTwentyBl4Z3:</li>
             </ul>
-            <button class="review-page-button">
+            <button id="review-page-button">
                 Review Page
             </button>
         </div>
