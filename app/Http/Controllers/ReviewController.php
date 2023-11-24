@@ -28,6 +28,14 @@ class ReviewController extends Controller
         return Redirect::to($previous);
     }
     function fetchFromID($userid) {
+        if (auth()->user() == null) {
+            return "User not logged in!";
+        }
+            $currUser = auth()->user()->id;
+
+        if ($currUser != $userid) {
+            return "You are not authorized to see those reviews!";
+        }
         return DB::select('select * from reviews where user_id = :user_id', ['user_id' => $userid]);
     }
 }
