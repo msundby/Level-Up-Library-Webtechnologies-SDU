@@ -1,14 +1,25 @@
 async function getReviews() {
     const fetchData = await fetch('./review');
     const data = await fetchData.json();
-    const reviewDiv = document.getElementById("other_reviews");
+    const other_reviews = document.getElementById("other_reviews");
     console.log(data);
 
     data.forEach((review) => {
         console.log(review);
-        const reviewTitle = document.createElement("p");
+        const reviewDiv = document.createElement('div')
+        reviewDiv.className = "review"
+        const reviewTitle = document.createElement("h3");
         reviewTitle.textContent = review.title;
         reviewDiv.appendChild(reviewTitle);
+        const reviewContent = document.createElement("p");
+        reviewContent.textContent = review.content;
+        reviewDiv.appendChild(reviewContent);
+        const reviewMetaData = document.createElement("p");
+        const reviewMetaDataString = "| User: #" + review.user_id + " | Platform: " + review.platform + " | Rating: " + review.rating + " |";
+        reviewMetaData.textContent = reviewMetaDataString;
+        reviewMetaData.className = "metaData";
+        reviewDiv.appendChild(reviewMetaData);
+        other_reviews.appendChild(reviewDiv);
     })
 
 }

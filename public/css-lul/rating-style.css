@@ -103,11 +103,11 @@ body{
 /* other reviews*/
 
     #other_reviews {
-        padding-left: 10%;
-        padding-right: 10%;
-        display: flex;
-        justify-content: space-evenly;
-        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 80%;
+        margin: 2% auto;
+        gap: 10% 2%;
     }
 
     .headline_text h2 {
@@ -121,4 +121,14 @@ body{
 
     .red_highlight {
         color: red;
+    }
+
+    .review {
+        background-color: #cbd5e0;
+        padding: 5%;
+        border: .2rem black solid;
+    }
+
+    .metaData {
+        font-style: italic;
     }

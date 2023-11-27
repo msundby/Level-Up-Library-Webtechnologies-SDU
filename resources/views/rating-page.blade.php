@@ -30,7 +30,7 @@
                     <option value="PC">PC</option>
                 </select>
                 <p>Content</p>
-                <input type="text" id="content" name="content">
+                <input type="text" id="content" name="content" maxlength="255">
                 <p>Rating<span class="red_highlight">*</span></p>
                 <select id="rating" name="rating">
                     <option value="1">1</option>
@@ -49,7 +49,7 @@
         </div>
         <div class="headline_text">
             <h2 id="gameName">{{ $game->name }}</h2>
-            <h3><span>4.8/5</span> | 2020 | Larian Studios</h3>
+            <h3><span>{{$game->aggregate_rating}} / 5</span> | {{$game->release_date}} |</h3>
         </div>
     </div>
 </div>
