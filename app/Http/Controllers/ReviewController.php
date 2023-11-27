@@ -11,9 +11,10 @@ use Illuminate\Support\Facades\Auth;
 class ReviewController extends Controller
 {
     //
-    function fetchAll()
+    function fetchAll(Request $request)
     {
         return DB::select('select * FROM reviews');
+
     }
     function insertOne(Request $request, $gameName) {
         if (auth()->user() == null) {
@@ -43,5 +44,11 @@ class ReviewController extends Controller
             return "You are not authorized to see those reviews!";
         }
         return DB::select('select * from reviews where user_id = :user_id', ['user_id' => $userid]);
+    }
+
+    function fetchByGame($game_name) {
+        $gameByName = DB::table('games')->where('name', $game_name)->first();
+        $game_id = $gameByName->game_id;
+        return DB::select('select * from reviews where game_id = :game_id', ['game_id' => $game_id]);
     }
 }

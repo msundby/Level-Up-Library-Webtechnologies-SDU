@@ -1,5 +1,5 @@
 async function getReviews() {
-    const fetchData = await fetch('http://127.0.0.1:8000/review');
+    const fetchData = await fetch('./review');
     const data = await fetchData.json();
     const reviewDiv = document.getElementById("other_reviews");
     console.log(data);
