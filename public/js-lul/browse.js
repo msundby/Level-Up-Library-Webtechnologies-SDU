@@ -34,7 +34,7 @@ async function createGameElements(){
         image.src = game['image_link'];
         name.textContent = game.name;
         description.textContent = game.description;
-        rating.textContent = game.aggregate_rating;
+        rating.textContent = game.aggregate_rating + "/5";
 
         gameContainer.className = "game_container"
 
