@@ -45,16 +45,16 @@
     </div>
     <div class="headline">
         <div class="headline_image">
-            <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co670h.png">
+            <img src={{ $game->image_link }}>
         </div>
         <div class="headline_text">
-            <h2>Baldurs Gate 3</h2>
+            <h2>{{ $game->name }}</h2>
             <h3><span>4.8/5</span> | 2020 | Larian Studios</h3>
         </div>
     </div>
 </div>
 <div id="other_reviews">
-    
+
 </div>
 </body>
 </html>

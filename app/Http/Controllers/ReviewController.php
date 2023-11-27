@@ -29,7 +29,8 @@ class ReviewController extends Controller
     }
     function fetchFromID($userid) {
         if (auth()->user() == null) {
-            return "User not logged in!";
+            //TODO: Add redirect to log in page
+            return redirect('/');
         }
             $currUser = auth()->user()->id;
 

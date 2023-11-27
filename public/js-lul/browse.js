@@ -31,7 +31,7 @@ async function createGameElements(){
         const span4 = document.createElement('span');
         const span5 = document.createElement('span');
 
-        image.src = game['image-link'];
+        image.src = game['image_link'];
         name.textContent = game.name;
         description.textContent = game.description;
         rating.textContent = game.aggregate_rating;

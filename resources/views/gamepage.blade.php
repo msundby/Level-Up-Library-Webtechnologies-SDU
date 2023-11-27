@@ -23,7 +23,7 @@
                 <button class="read-more-button">Read More</button>
             </div>
             <div class="game-image">
-                <a href="#"><img src="resources/starfield-pc-physical-packaging.jpg" id="game-image" alt="image"></a>
+                <a href="#"><img src={{$game->image_link}} id="game-image" alt="image"></a>
             </div>
         </div>
 
@@ -49,7 +49,7 @@
                 <li>MrGameAficionado:</li>
                 <li>FourTwentyBl4Z3:</li>
             </ul>
-            <button class="review-page-button">
+            <button class="review-page-button" onclick="document.location.href='{{$game->name}}/rating'">
                 Review Page
             </button>
         </div>

@@ -39,8 +39,15 @@ class GameController extends Controller
     public function show($name)
     {
         $game = DB::table('games')->where('name', $name)->first();
-
+        //return $game;
         return view('gamepage', ['game' => $game]);
+    }
+
+    public function rate($name)
+    {
+        $game = DB::table('games')->where('name', $name)->first();
+
+        return view('rating-page', ['game' => $game]);
     }
 
 
