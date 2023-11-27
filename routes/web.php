@@ -20,40 +20,40 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Root
 Route::get('/', function () {
     return view('welcome');
 });
 
-
+/*API calls
+Key takeaway: returns data instead of a view
+TODO: Move to API folder
+*/
 Route::get('/games', [GameController::class, 'index']);
+Route::get('/all-reviews',[ReviewController::class,'fetchAll']);
+Route::get('/review', [ReviewController::class, 'fetchAll']);
+Route::get('/review/{userid}', [ReviewController::class, 'fetchFromID']);
+//API as well, but for inserting some data
+Route::post('/review', [ReviewController::class, 'insertOne']);
 
+
+//All relevant routes for the gamepage and the reviews here of
 Route::get('/gamepage/{name}', [GameController::class,'show']);
-//Added by Marcus - The rating page per game
 Route::get('/gamepage/{name}/rating', [GameController::class,'rate']);
 Route::get('/gamepage/{name}/review', [ReviewController::class, 'fetchByGame']);
 Route::post('/gamepage/{name}/review', [ReviewController::class, 'insertOne']);
-
 //Route::get('/gamepage/{id}', function() {
 //    return view('gamepage');
 //});
 
 
-
-Route::get('/home', function () {
-    return view('welcome');
-});
-
-Route::get('/test', function() {
-    $user = DB::select("select * from users");
-    dd($user);
-});
-
+//Browse all games view
 Route::get('/browse', function () {
     return view('browse');
 });
 
-Route::get('/games',[GameController::class,'index']);
-Route::get('/all-reviews',[ReviewController::class,'fetchAll']);
+
+
 
 Route::get('/nav-bar-test', function () {
     return view('nav-bar');
@@ -68,9 +68,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
 
 
 Route::view('/rating', 'rating-page');
-Route::get('/review', [ReviewController::class, 'fetchAll']);
-Route::post('/review', [ReviewController::class, 'insertOne']);
-Route::get('/review/{userid}', [ReviewController::class, 'fetchFromID']);
+
 
 
 Route::middleware('auth')->group(function () {

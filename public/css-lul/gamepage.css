@@ -45,8 +45,6 @@ img {
 .game-container-header {
     padding-top: 4rem;
     width: 100%;
-    height: clamp(10rem, 15rem, 30vh);
-    background-image: url("resources/starfield-cover-image.jpg");
     background-size: cover;
     background-position: center;
     opacity: 60%;

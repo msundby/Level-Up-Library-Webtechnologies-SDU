@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Level Up Library</title>
     <link rel="stylesheet" href="{{ asset('css-lul/gamepage.css') }}">
+    <script defer src="{{ asset('js-lul/gamepage.js') }}"></script>
     <script src="https://kit.fontawesome.com/e7bbbc0c8d.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -16,7 +17,7 @@
         <div class="game-container-header"></div>
         <div class="game-info-container">
             <div class="game-info-left">
-                <div class="game-title">{{ $game->name }}</div>
+                <div class="game-title" id="gameName">{{ $game->name }}</div>
                 <div class="game-description">
                     <p>{{$game->description}}</p>
                 </div>
@@ -28,13 +29,14 @@
         </div>
 
         <div class="game-publisher">
-            Publisher: Bethesda
+            Publisher: WIP
         </div>
         <div class="release-date">
-            Release date: Sep 6, 2023
+            Release date: {{$game->release_date}}
         </div>
         <div class="game-tags">
             <ul> Tags:
+                <li>WIP</li>
                 <li>Single Player</li>
                 <li>Role Playing Game</li>
                 <li>First-Person Shooter</li>
@@ -44,10 +46,11 @@
         </div>
         <div class="review-box">
             Highlighted User Reviews:
-            <ul>
-                <li>FalloutBoy_xXx:</li>
-                <li>MrGameAficionado:</li>
-                <li>FourTwentyBl4Z3:</li>
+            <ul id="user_reviews">
+                <!-- Bad attempt at skeleton -->
+                <li>Fetching ... </li>
+                <li>Fetching ... </li>
+                <li>Fetching ... </li>
             </ul>
             <button class="review-page-button" onclick="document.location.href='{{$game->name}}/rating'">
                 Review Page
