@@ -1,4 +1,5 @@
 //TODO: THIS SHOULD REALLY BE DONE IN THE DATABASE, TO OPTIMIZE PERFORMANCE
+//THIS CODE SHOULD ONLY BE ENABLED WHEN A FIX ON FREEZE WHEN THERE ARE LESS THAN 3 REVIEWS HAS BEEN FIXED
 
 async function getReviews() {
     const gameName = document.getElementById('gameName').textContent;
@@ -21,9 +22,9 @@ function getRandomReviews(array) {
     return randomReviews;
 }
 
-async function displayRandomReviews() {
+ function displayRandomReviews() {
     const user_reviews = document.getElementById('user_reviews');
-    const allReviews = await getReviews();
+    const allReviews = getReviews();
     const selectedReviews = getRandomReviews(allReviews);
     user_reviews.innerHTML = "";
     selectedReviews.forEach((i) => {
