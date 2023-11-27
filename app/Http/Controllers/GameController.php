@@ -75,4 +75,13 @@ class GameController extends Controller
     {
         //
     }
+
+    public function topPicks() {
+        $topPicks = DB::table('games')
+            ->orderBy('aggregate_rating', 'desc')
+            ->limit(3) // Adjust the limit as needed
+            ->get();
+
+        return view('toppicks', ['topPicks' => $topPicks]);
+    }
 }

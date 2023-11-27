@@ -4,6 +4,7 @@ use App\Http\Controllers\GameController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestingController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\ErrorController;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Auth;
@@ -37,6 +38,13 @@ Route::get('/review/{userid}', [ReviewController::class, 'fetchFromID']);
 Route::post('/review', [ReviewController::class, 'insertOne']);
 
 
+/*TODO:
+    1. Implement custom error page
+    2. Route pages here, with try catch
+*/
+Route::get('/error', [ErrorController::class, 'index']);
+Route::get('/error/{error}', [ErrorController::class, 'knownError']);
+
 //All relevant routes for the gamepage and the reviews here of
 Route::get('/gamepage/{name}', [GameController::class,'show']);
 Route::get('/gamepage/{name}/rating', [GameController::class,'rate']);
@@ -45,6 +53,8 @@ Route::post('/gamepage/{name}/review', [ReviewController::class, 'insertOne']);
 //Route::get('/gamepage/{id}', function() {
 //    return view('gamepage');
 //});
+
+Route::get('/top-picks', [GameController::class,'topPicks']);
 
 
 //Browse all games view

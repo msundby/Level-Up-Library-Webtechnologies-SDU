@@ -1,3 +1,5 @@
+//TODO: THIS SHOULD REALLY BE DONE IN THE DATABASE, TO OPTIMIZE PERFORMANCE
+
 async function getReviews() {
     const gameName = document.getElementById('gameName').textContent;
     const fetchData = await fetch(`${gameName}/review`);

@@ -1,0 +1,35 @@
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e5e5f7;
+    opacity: 87%;
+    background-image: radial-gradient( ellipse farthest-corner at 10px 10px , #d8d9eb, #d8d9eb 50%, #e5e5f7 50%);
+    background-size: 10px 10px;
+}
+
+#title {
+    text-align: center;
+}
+
+#top-picks {
+    text-align: center;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    width: 80%;
+}
+.game {
+    display: grid;
+    margin: 5%;
+    background-color: #cbd5e0;
+    padding: 2%;
+    border: .2rem black solid;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
