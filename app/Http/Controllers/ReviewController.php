@@ -15,17 +15,22 @@ class ReviewController extends Controller
     {
         return DB::select('select * FROM reviews');
     }
-    function insertOne(Request $request) {
-        // Try catch if user is not logged in
+    function insertOne(Request $request, $gameName) {
+        if (auth()->user() == null) {
+            // Try catch if user is not logged in
+            //TODO: Add redirect to log in page
+            return redirect('/');
+        }
+        $gameByName = DB::table('games')->where('name', $gameName)->first();
+        $game_id = $gameByName->game_id;
         $user_id = auth()->user()->id;
-        $game_id = 1;
         $title = $request->get('title');
         $platform = $request->get('platform');
         $content = $request->get('content');
         $rating = $request->get('rating');
         DB::insert('insert into reviews (user_id, game_id, title, platform, content, rating) values (?, ?, ?, ?, ?, ?)', [$user_id, $game_id, $title, $platform, $content, $rating]);
-        $previous = url()->previous();
-        return Redirect::to($previous);
+        return Redirect::to(url()->previous());
+        //return [$request, $game_id];
     }
     function fetchFromID($userid) {
         if (auth()->user() == null) {

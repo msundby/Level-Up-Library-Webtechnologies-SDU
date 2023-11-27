@@ -30,6 +30,7 @@ Route::get('/games', [GameController::class, 'index']);
 Route::get('/gamepage/{name}', [GameController::class,'show']);
 //Added by Marcus - The rating page per game
 Route::get('/gamepage/{name}/rating', [GameController::class,'rate']);
+Route::post('/gamepage/{name}/review', [ReviewController::class, 'insertOne']);
 
 //Route::get('/gamepage/{id}', function() {
 //    return view('gamepage');

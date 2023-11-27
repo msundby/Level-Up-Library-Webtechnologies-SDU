@@ -48,7 +48,7 @@
             <img src={{ $game->image_link }}>
         </div>
         <div class="headline_text">
-            <h2>{{ $game->name }}</h2>
+            <h2 id="gameName">{{ $game->name }}</h2>
             <h3><span>4.8/5</span> | 2020 | Larian Studios</h3>
         </div>
     </div>
