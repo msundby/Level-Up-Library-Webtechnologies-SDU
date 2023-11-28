@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Level Up Library</title>
     <link rel="stylesheet" href="{{ asset('css-lul/gamepage.css') }}">
-    <!--<script defer src="{{ asset('js-lul/gamepage.js') }}"></script> -->
+    <script defer src="{{ asset('js-lul/gamepage.js') }}"></script>
     <script src="https://kit.fontawesome.com/e7bbbc0c8d.js" crossorigin="anonymous"></script>
 </head>
 <body>

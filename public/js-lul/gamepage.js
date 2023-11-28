@@ -1,5 +1,5 @@
 //TODO: THIS SHOULD REALLY BE DONE IN THE DATABASE, TO OPTIMIZE PERFORMANCE
-//THIS CODE SHOULD ONLY BE ENABLED WHEN A FIX ON FREEZE WHEN THERE ARE LESS THAN 3 REVIEWS HAS BEEN FIXED
+//Fixed the freeze! which i gloriously introduced myself
 
 async function getReviews() {
     const gameName = document.getElementById('gameName').textContent;
@@ -10,8 +10,7 @@ async function getReviews() {
 getReviews();
 function getRandomReviews(array) {
     const randomReviews = [];
-
-    while (randomReviews.length < 3) {
+    while (randomReviews.length < Math.min(3, array.length)) {
         const randomReview = Math.floor(Math.random() * array.length);
 
         if (!randomReviews.includes(randomReview)) {
@@ -22,9 +21,10 @@ function getRandomReviews(array) {
     return randomReviews;
 }
 
- function displayRandomReviews() {
+//TODO: Add different event on review length 0
+ async function displayRandomReviews() {
     const user_reviews = document.getElementById('user_reviews');
-    const allReviews = getReviews();
+    const allReviews = await getReviews();
     const selectedReviews = getRandomReviews(allReviews);
     user_reviews.innerHTML = "";
     selectedReviews.forEach((i) => {
