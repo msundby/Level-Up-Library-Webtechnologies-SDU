@@ -49,7 +49,7 @@
         </div>
         <div class="headline_text">
             <h2 id="gameName">{{ $game->name }}</h2>
-            <h3><span>{{$game->aggregate_rating}} / 5</span> | {{$game->release_date}} |</h3>
+            <h3><span>{{ number_format($game->aggregate_rating, 2) }} / 5</span> | {{$game->release_date}} |</h3>
         </div>
     </div>
 </div>
