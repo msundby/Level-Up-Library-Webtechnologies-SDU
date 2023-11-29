@@ -32,16 +32,17 @@ img {
 }
 
 
+
 .container2 {
     width: min(90%, 60rem);
     margin-inline: auto;
     padding: max(3vh, 1rem);
+    padding-top: 10% !important;
     background-color: #1D1128;
     opacity: 90%;
     border-bottom-left-radius: 0.8rem;
     border-bottom-right-radius: 0.8rem;
 }
-
 .game-container-header {
     padding-top: 4rem;
     width: 100%;
