@@ -26,7 +26,13 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <div class="menu-links">
+                    @isset($records)
+                    // $records is defined and is not null...
+                    @endisset
+
+                    @empty($records)
+                    // $records is "empty"...
+                    @endempty      <div class="menu-links">
                         <li><a href="games.html">Browse</a></li>
                         <li><a href="/top-picks">Top Picks</a></li>
                     </div>
