@@ -34,6 +34,7 @@
         <div class="release-date">
             Release date: {{$game->release_date}}
         </div>
+        <!--
         <div class="game-tags">
             <ul> Tags:
                 <li>WIP</li>
@@ -44,6 +45,8 @@
 
             </ul>
         </div>
+       -->
+
         <div class="review-box">
             Highlighted User Reviews:
             <ul id="user_reviews">
@@ -52,9 +55,17 @@
                 <li>Fetching ... </li>
                 <li>Fetching ... </li>
             </ul>
+            @guest
             <button class="review-page-button" onclick="document.location.href='{{$game->name}}/rating'">
-                Review Page
+                Login to review this game
             </button>
+            @endguest
+
+            @auth
+            <button class="review-page-button" onclick="document.location.href='{{$game->name}}/rating'">
+                Review game
+            </button>
+            @endauth
         </div>
     </div>
 
