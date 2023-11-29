@@ -16,7 +16,9 @@
 <div class="center">
 
     <div class="loginForm" id="loginForm">
-
+        @isset ($rating_error)
+        <p id="rating-error">{{$rating_error}}</p>
+        @endisset
         <label for="show" class="closebtn fas fa-times" title="close" onclick="closeLogin()"></label>
         <div class="text">Login</div>
 

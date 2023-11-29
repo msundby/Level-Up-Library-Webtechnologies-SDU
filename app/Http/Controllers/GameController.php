@@ -48,7 +48,7 @@ class GameController extends Controller
         if (auth()->user() == null) {
             //TODO: Add redirect to log in page
             $rating_error = "Login to rate this game";
-            return view('auth/login', ['rating_error' => $rating_error]) ;
+            return view('auth/loginForm', ['rating_error' => $rating_error]) ;
         }
         $game = DB::table('games')->where('name', $name)->first();
         return view('rating-page', ['game' => $game]);

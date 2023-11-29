@@ -1,9 +1,7 @@
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-    @isset ($rating_error)
-    <p class="text-red-800 italic mb-2">{{$rating_error}}</p>
-    @endisset
+
     <form method="POST" action="{{ route('login') }}">
         @csrf
 

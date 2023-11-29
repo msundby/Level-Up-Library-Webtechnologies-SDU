@@ -135,3 +135,8 @@ form .btns button{
 form .btns button:hover{
     background: #7353ba;
 }
+#rating-error{
+    color: #dc0404;
+    font-style: italic;
+    font-weight: bold;
+}
