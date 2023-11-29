@@ -1,7 +1,4 @@
 <x-app-layout>
-    <header>
-        @include('nav-bar')
-    </header>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ auth()->user()->name }}'s Profile
@@ -15,10 +12,14 @@
                     <div class="user-reviews">
                         <h3>My Reviews</h3>
                         @foreach($reviews as $review)
-                        <div class="review">
-                            <h4>{{ $review->game->name }}</h4>
-                            <p>{{ $review->description }}</p>
+                        <div id="{{$review->review_id}}div" class="review">
+                            <h3>Game: {{ $review->game->name }}</h3>
+                            <h3>Title: {{ $review->title }}</h3>
+                            <h3>Review: {{ $review->content }}</h3>
                             <p>Rating: {{ $review->rating }}</p>
+                            <img src="{{ $review->game->image_link }}">
+                            <button id="{{$review->review_id}}" onclick="deleteReview('{{ $review->review_id }}')">Delete</button>
+                            <button id="{{$review->review_id}}">Edit</button>
                         </div>
                         @endforeach
                     </div>
@@ -26,6 +27,8 @@
             </div>
         </div>
     </div>
+
+    <script defer src="{{ asset('js-lul/dashboard.js') }}"></script>
 
 
 
