@@ -25,6 +25,7 @@ async function createGameElements(){
         name.id = 'featured-title';
         const description = document.createElement('p');
         description.id = 'featured-snippet';
+
         const rating = document.createElement('div');
         rating.id = 'rating';
         const span1 = document.createElement('span');
@@ -36,7 +37,8 @@ async function createGameElements(){
         image.src = game['image_link'];
         name.textContent = game.name;
         description.textContent = game.description;
-        rating.textContent = game.aggregate_rating + "/5";
+        const roundedRating = parseFloat(game.aggregate_rating).toFixed(2);
+        rating.textContent = roundedRating + "/5";
 
         gameContainer.className = "game_container"
 
@@ -88,9 +90,10 @@ function displaySearchedGames(searchGames) {
         const span5 = document.createElement('span');
 
         image.src = game['image_link'];
+        const roundedRating = parseFloat(game.aggregate_rating).toFixed(2);
         name.textContent = game.name;
         description.textContent = game.description;
-        rating.textContent = game.aggregate_rating + "/5";
+        rating.textContent = roundedRating + "/5";
 
         gameContainer.className = "game_container"
 
