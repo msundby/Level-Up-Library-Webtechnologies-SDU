@@ -56,19 +56,13 @@ Route::post('/gamepage/{name}/review', [ReviewController::class, 'insertOne']);
 
 Route::get('/top-picks', [GameController::class,'topPicks']);
 
+Route::get('/loginForm', function(){
+    return view('loginForm');
+});
 
-//Browse all games view
 Route::get('/browse', function () {
     return view('browse');
 });
-
-
-
-
-Route::get('/nav-bar-test', function () {
-    return view('nav-bar');
-});
-
 
 Route::get('/testing', [TestingController::class, 'showReviewByAuthenticatedUser']);
 
