@@ -24,10 +24,7 @@ use Illuminate\Support\Facades\Route;
 // Root
 Route::get('/', function () {
     return view('welcome');
-})
-->name('home');
-
-
+});
 
 /*API calls
 Key takeaway: returns data instead of a view
@@ -40,8 +37,6 @@ Route::get('/review/{userid}', [ReviewController::class, 'fetchFromID']);
 //API as well, but for inserting some data
 Route::post('/review', [ReviewController::class, 'insertOne']);
 
-Route::delete('/review/{id}', [ReviewController::class, 'deleteOne']);
-Route::put('/review/{id}', [ReviewController::class, 'updateOne']);
 
 /*TODO:
     1. Implement custom error page
@@ -55,10 +50,6 @@ Route::get('/gamepage/{name}', [GameController::class,'show']);
 Route::get('/gamepage/{name}/rating', [GameController::class,'rate']);
 Route::get('/gamepage/{name}/review', [ReviewController::class, 'fetchByGame']);
 Route::post('/gamepage/{name}/review', [ReviewController::class, 'insertOne']);
-
-
-
-
 //Route::get('/gamepage/{id}', function() {
 //    return view('gamepage');
 //});

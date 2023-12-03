@@ -16,12 +16,6 @@ class ReviewController extends Controller
         return DB::select('select * FROM reviews');
 
     }
-
-    function deleteOne($review_id){
-        Review::where('review_id', $review_id)->first()->delete();
-    }
-
-
     function insertOne(Request $request, $gameName) {
         if (auth()->user() == null) {
             // Try catch if user is not logged in
