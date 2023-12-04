@@ -24,7 +24,8 @@ use Illuminate\Support\Facades\Route;
 // Root
 Route::get('/', function () {
     return view('welcome');
-});
+})
+    ->name('home');
 
 /*API calls
 Key takeaway: returns data instead of a view
