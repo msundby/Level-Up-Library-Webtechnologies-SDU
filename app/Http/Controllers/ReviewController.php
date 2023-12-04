@@ -33,6 +33,7 @@ class ReviewController extends Controller
         return Redirect::to(url()->previous());
         //return [$request, $game_id];
     }
+
     function fetchFromID($userid) {
         if (auth()->user() == null) {
             //TODO: Add redirect to log in page
@@ -51,4 +52,9 @@ class ReviewController extends Controller
         $game_id = $gameByName->game_id;
         return DB::select('select * from reviews where game_id = :game_id', ['game_id' => $game_id]);
     }
+
+    function deleteOne($review_id){
+        Review::where('review_id', $review_id)->first()->delete();
+    }
+
 }
