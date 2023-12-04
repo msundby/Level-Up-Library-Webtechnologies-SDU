@@ -21,7 +21,10 @@ function deleteReview(reviewId) {
         .catch(error => {
             console.error('Fetch error:', error);
         });
-
-
-
 }
+
+function editReview(reviewId){
+    const reviewDiv = document.getElementById(reviewId + "div");
+    }
+
+
