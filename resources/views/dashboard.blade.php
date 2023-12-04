@@ -15,12 +15,15 @@
                         @foreach($reviews as $review)
                         <div id="{{$review->review_id}}div" class="review">
                             <h3 id="{{$review->review_id}}h3-gameTitle">Game: {{ $review->game->name }}</h3>
-                            <h3 id="{{$review->review_id}}h3-reviewTitle">Title: {{ $review->title }}</h3>
-                            <h3 id="{{$review->review_id}}h3-reviewContent">Review: {{ $review->content }}</h3>
-                            <p id="{{$review->review_id}}p-Rating">Rating: {{ $review->rating }}</p>
+                            <h2>Title:</h2>
+                            <h3 id="{{$review->review_id}}h3-reviewTitle" class="editable">{{ $review->title }}</h3>
+                            <h2>Content:</h2>
+                            <h3 id="{{$review->review_id}}h3-reviewContent" class="editable">{{ $review->content }}</h3>
+                            <h2>Rating:</h2>
+                            <p id="{{$review->review_id}}p-Rating" class="editable">{{ $review->rating }}</p>
                             <img id="{{$review->review_id}}img" src="{{ $review->game->image_link }}">
-                            <button id="{{$review->review_id}}" onclick="deleteReview('{{ $review->review_id }}')">Delete</button>
-                            <button id="{{$review->review_id}}" onClick="editReview('{{ $review->review_id }}')">Edit</button>
+                            <button id="{{$review->review_id}}delete" onclick="deleteReview('{{ $review->review_id }}')">Delete</button>
+                            <button id="{{$review->review_id}}edit" onClick="editReview('{{ $review->review_id }}')">Edit</button>
                         </div>
                         @endforeach
 

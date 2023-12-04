@@ -16,6 +16,19 @@ class ReviewController extends Controller
         return DB::select('select * FROM reviews');
 
     }
+    function updateOne(Request $request) {
+
+        $reviewId = $request->get('reviewId');
+        $title = $request->get('title');
+        $content = $request->get('content');
+        $rating = $request->get('rating');
+        DB::table('reviews')->where('review_id',$reviewId)->update([
+            'title'=>$title, 'content'=>$content, 'rating'=>$rating
+        ]);
+
+    }
+
+
     function insertOne(Request $request, $gameName) {
         if (auth()->user() == null) {
             // Try catch if user is not logged in

@@ -35,6 +35,7 @@ Route::get('/games', [GameController::class, 'index']);
 Route::get('/all-reviews',[ReviewController::class,'fetchAll']);
 Route::get('/review', [ReviewController::class, 'fetchAll']);
 Route::get('/review/{userid}', [ReviewController::class, 'fetchFromID']);
+
 //API as well, but for inserting some data
 Route::post('/review', [ReviewController::class, 'insertOne']);
 Route::delete('/review/{id}', [ReviewController::class, 'deleteOne']);
