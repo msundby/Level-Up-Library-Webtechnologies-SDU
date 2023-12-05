@@ -1,4 +1,69 @@
-.review{
+.wrapper {
+    width: 60%;
+    margin: auto;
+}
+
+.user-reviews {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2%;
+}
+
+.container{
     border: 0.5vh solid black;
-    margin-bottom: 2vh;
+    display: grid;
+    padding: 1rem;
+    font-size: small;
+    width: fit-content;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: auto;
+}
+
+.reviewtitle {
+    font-weight: bolder;
+}
+.review {
+    margin-bottom: 10%;
+    height: fit-content;
+}
+
+.review > * {
+    margin-bottom: 2%;
+}
+
+.delete {
+    padding: 2%;
+    background: red;
+    color: white;
+    box-shadow: 2px 2px 2px black;
+    min-width: 30%;
+}
+
+.save {
+    padding: 2%;
+    background: green;
+    color: white;
+    box-shadow: 2px 2px 2px black;
+    min-width: 30%;
+    margin-top: 5%;
+}
+
+.edit {
+    padding: 2%;
+    background: darkorange;
+    color: white;
+    box-shadow: 2px 2px 2px black;
+    min-width: 30%;
+}
+
+
+.edited2 {
+    resize: none;
+    display: block;
+    min-height: 200px; /* or any other value */
 }

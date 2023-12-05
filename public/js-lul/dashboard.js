@@ -28,23 +28,35 @@ function editReview(reviewId) {
     const reviewChildren = reviewDiv.children;
 
     let counter = 0;
-
+    console.log(reviewChildren)
     for (const child of reviewChildren) {
 
         if (child.className === "editable") {
+            console.log(child)
             counter += 1;
+            if (counter % 2 == 0) {
+                const text = child.textContent;
+                const txtElement = document.createElement("textarea");
+                txtElement.value = text;
+                txtElement.className = "edited" + counter;
+                child.replaceWith(txtElement);
+            }
             const text = child.textContent;
             const txtElement = document.createElement("input");
             txtElement.value = text;
             txtElement.className = "edited" + counter;
-
             child.replaceWith(txtElement);
+
         }
     }
 
     const saveButton = document.createElement("button");
     saveButton.textContent = "Save";
+    saveButton.className = "save";
     reviewDiv.appendChild(saveButton);
+
+    const gameImg = document.getElementById(reviewId + "img");
+    gameImg.style.display = "none";
 
     const editButton = document.getElementById(reviewId + "edit");
     editButton.style.display = "none";
