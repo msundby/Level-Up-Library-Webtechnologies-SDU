@@ -50,8 +50,9 @@
     color: white;
     box-shadow: 2px 2px 2px black;
     min-width: 30%;
-    margin-top: 5%;
+    margin: auto;
 }
+
 
 .edit {
     padding: 2%;
