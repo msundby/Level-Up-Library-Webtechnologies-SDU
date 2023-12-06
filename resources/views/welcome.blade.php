@@ -37,13 +37,11 @@
 </section>
 
 
-</div>
 <section class="game_collection">
     <div class="grid" id="gridGamesNewestGames">
     <h1 class="headliner">NEWEST GAMES</h1>
 </section>
 
-</div>
 
 <section class="headliner">
     <h1>OUR FAVORITES RIGHT NOW</h1>
