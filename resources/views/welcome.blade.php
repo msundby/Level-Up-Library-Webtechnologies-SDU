@@ -13,6 +13,7 @@
 <header>
     @include('nav-bar')
 </header>
+<div class="topBanner">
 <section class="hero">
     <h1>Welcome to the Ultimate Game Library</h1>
     <h2>Discover new games, read reviews, and level up your gaming experience!</h2>
@@ -29,6 +30,11 @@
     </a>
     </div>
 </section>
+</div>
+
+<div class="underbar"></div>
+
+
 
 
 <section class="game_collection">
@@ -36,20 +42,13 @@
     <h1 class="headliner">BEST RATED GAMES</h1>
 </section>
 
-
-<section class="game_collection">
-    <div class="grid" id="gridGamesNewestGames">
-    <h1 class="headliner">NEWEST GAMES</h1>
-</section>
-
-
-<section class="headliner">
-    <h1>OUR FAVORITES RIGHT NOW</h1>
-</section>
+<div class="favorite">
+    <h1 class="headliner1">OUR FAVORITES RIGHT NOW</h1>
+</div>
 <section class="featured-games">
     <article class ="game">
         <a href="/gamepage/{{$game1->name}}">
-        <img src={{$game1->image_link}}>
+            <img src={{$game1->image_link}}>
         </a>
         <h3 class="featured-title">{{$game1->name}}</h3>
         <p class="featured-snippet">{{$game1->description}}</p>
@@ -60,7 +59,7 @@
 
     <article class ="game">
         <a href="/gamepage/{{$game2->name}}">
-        <img src={{$game2->image_link}}>
+            <img src={{$game2->image_link}}>
         </a>
         <h3 class="featured-title">{{$game2->name}}</h3>
         <p class="featured-snippet">{{$game2->description}}</p>
@@ -71,7 +70,7 @@
 
     <article class ="game">
         <a href="/gamepage/{{$game3->name}}">
-        <img src={{$game3->image_link}}>
+            <img src={{$game3->image_link}}>
         </a>
         <h3 class="featured-title">{{$game3->name}}</h3>
         <p class="featured-snippet">{{$game3->description}}</p>
@@ -83,6 +82,14 @@
 
     </article>
 </section>
+
+
+<section class="game_collection">
+    <div class="grid" id="gridGamesNewestGames">
+    <h1 class="headliner">NEWEST GAMES</h1>
+</section>
+
+
 
 
 </body>
