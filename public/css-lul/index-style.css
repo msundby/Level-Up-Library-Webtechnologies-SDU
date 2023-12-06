@@ -90,12 +90,12 @@ body{
 
 .hero {
     font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 2%;
     justify-content: center;
     align-items: center;
     text-align: left;
     font-size: x-large;
-    margin: 5% 20%;
+    margin: 5% auto;
+    width: 70%;
 
 }
 
