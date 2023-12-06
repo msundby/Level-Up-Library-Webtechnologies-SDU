@@ -13,26 +13,42 @@
 <header>
     @include('nav-bar')
 </header>
-<section class="our-favorites">
-    <p>Highest rated games</p>
+<section class="hero">
+    <h1>Welcome to the Ultimate Game Library</h1>
+    <h2>Discover new games, read reviews, and level up your gaming experience!</h2>
+    <div id="action_buttons">
+    <a href="browse">
+      <button id="get_started">
+        Get Started
+      </button>
+    </a>
+    <a href="register">
+      <button id="get_started">
+        Register
+      </button>
+    </a>
+    </div>
 </section>
-<div class="grid" id="gridGamesTopRated">
+
+
+<section class="game_collection">
+    <div class="grid" id="gridGamesTopRated">
+    <h1 class="headliner">BEST RATED GAMES</h1>
+</section>
+
 
 </div>
-<section class="our-favorites">
-    <p>Newest games</p>
+<section class="game_collection">
+    <div class="grid" id="gridGamesNewestGames">
+    <h1 class="headliner">NEWEST GAMES</h1>
 </section>
-<div class="grid" id="gridGamesNewestGames">
 
 </div>
 
-<section class="our-favorites">
-    <p>OUR FAVORITES RIGHT NOW</p>
+<section class="headliner">
+    <h1>OUR FAVORITES RIGHT NOW</h1>
 </section>
-
-
 <section class="featured-games">
-
     <article class ="game">
         <img src="https://images.hindustantimes.com/tech/img/2023/09/06/960x540/Baldur_Gate_3_1694006233080_1694006237849.jpg">
         <h3 class="featured-title">Baldurs gate 3</h3>
