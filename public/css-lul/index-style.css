@@ -48,6 +48,7 @@ body{
 
 .grid-item:hover{
     transform: scale(1.02);
+    cursor: pointer;
 }
 
 .overlay {
@@ -134,6 +135,7 @@ body{
     width: auto;
     flex: 1;
     max-width: 300px;
+    cursor:pointer;
 }
 
 .game:hover{

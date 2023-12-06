@@ -34,48 +34,39 @@
 <section class="featured-games">
 
     <article class ="game">
-        <img src="https://images.hindustantimes.com/tech/img/2023/09/06/960x540/Baldur_Gate_3_1694006233080_1694006237849.jpg">
-        <h3 class="featured-title">Baldurs gate 3</h3>
-        <p class="featured-snippet">Dive into an epic Dungeons & Dragons adventure filled with mythical battles and choices.
-            Shape your destiny as you confront monsters, forge alliances, and unravel mysteries.
-            Experience a captivating story and immerse yourself in the rich lore of the Forgotten Realms.</p>
+        <a href="/gamepage/{{$game1->name}}">
+        <img src={{$game1->image_link}}>
+        </a>
+        <h3 class="featured-title">{{$game1->name}}</h3>
+        <p class="featured-snippet">{{$game1->description}}</p>
         <div class ="rating">
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+            {{$game1->aggregate_rating}} / 5
         </div>
     </article>
 
     <article class ="game">
-        <img src="https://assets.hardwarezone.com/img/2023/03/cs2.jpg">
-        <h3 class="featured-title">Counter Strike 2</h3>
-        <p class="featured-snippet">Engage in intense tactical warfare with teammates in this legendary first-person shooter.
-            Plan strategies, defuse bombs, and eliminate terrorists in thrilling, team-based matches.
-            Sharpen your reflexes, communication, and teamwork skills to become a top-ranked CS:2 player.</p>
+        <a href="/gamepage/{{$game2->name}}">
+        <img src={{$game2->image_link}}>
+        </a>
+        <h3 class="featured-title">{{$game2->name}}</h3>
+        <p class="featured-snippet">{{$game2->description}}</p>
         <div class ="rating">
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+            {{$game2->aggregate_rating}} / 5
         </div>
     </article>
 
     <article class ="game">
-        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202108/0410/2odx6gpsgR6qQ16YZ7YkEt2B.png">
-        <h3 class="featured-title">Elden ring</h3>
-        <p class="featured-snippet">Embark on an epic action RPG journey through a breathtaking, mystical world.
-            Uncover ancient secrets, battle formidable foes, and wield powerful magic and weaponry.
-            With its rich lore and open-world exploration, Elden Ring promises an unforgettable adventure.</p>
+        <a href="/gamepage/{{$game3->name}}">
+        <img src={{$game3->image_link}}>
+        </a>
+        <h3 class="featured-title">{{$game3->name}}</h3>
+        <p class="featured-snippet">{{$game3->description}}</p>
         <div class ="rating">
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+            {{$game3->aggregate_rating}} / 5
         </div>
+    </article>
+
+
     </article>
 </section>
 

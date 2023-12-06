@@ -22,10 +22,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Root
-Route::get('/', function () {
-    return view('welcome');
-})
+Route::get('/', [GameController::class, 'welcomeOurFavorites'])
     ->name('home');
+
+
 
 /*API calls
 Key takeaway: returns data instead of a view

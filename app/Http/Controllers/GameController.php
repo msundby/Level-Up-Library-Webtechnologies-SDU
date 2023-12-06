@@ -12,6 +12,16 @@ class GameController extends Controller
     /**
      * Display a listing of the resource.
 */
+    public function welcomeOurFavorites(){
+
+        $game1 = DB::table('games')->where('game_id', 8)->first();
+        $game2 = DB::table('games')->where('game_id', 15)->first();
+        $game3 = DB::table('games')->where('game_id', 10)->first();
+
+        return view('welcome', ['game1'=>$game1,'game2'=>$game2,'game3'=>$game3]);
+    }
+
+
     public function index()
     {
         return Game::all();
