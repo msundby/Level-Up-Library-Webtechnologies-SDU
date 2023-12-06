@@ -10,11 +10,12 @@
 }
 
 .container{
-    border: 0.5vh solid black;
+    border: 0.1vh solid black;
     display: grid;
     padding: 1rem;
     font-size: small;
     width: fit-content;
+    border-radius: 1rem;
 }
 
 .action-buttons {
@@ -38,28 +39,32 @@
 
 .delete {
     padding: 2%;
-    background: red;
+    background: #d8504d;
     color: white;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 1px 1px 1px black;
     min-width: 30%;
+    border-radius: 0.3rem;
 }
 
 .save {
     padding: 2%;
     background: green;
     color: white;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 1px 1px 1px black;
     min-width: 30%;
     margin: auto;
+    border-radius: 0.3rem;
 }
 
 
 .edit {
     padding: 2%;
-    background: darkorange;
+    background: #bd3f89;
     color: white;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 1px 1px 1px black;
     min-width: 30%;
+    border-radius: 0.3rem;
+    opacity: 0.9;
 }
 
 

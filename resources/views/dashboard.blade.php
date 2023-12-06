@@ -6,7 +6,7 @@
     </x-slot>
     <!-- This code has a bug, if you open all the edits of a line -->
     <div class="wrapper">
-        <h3>My Reviews</h3>
+        <h3 class = reviewTitle>My Reviews</h3>
         <div class="user-reviews">
             @foreach($reviews as $review)
             <div class="container">
@@ -22,8 +22,8 @@
                     <p id="{{$review->review_id}}p-Rating" class="editable">{{ $review->rating }}</p>
                 </div>
                 <div class="action-buttons">
-                    <button class="delete" id="{{$review->review_id}}delete" onclick="deleteReview('{{ $review->review_id }}')">Delete</button>
                     <button class="edit" id="{{$review->review_id}}edit" onClick="editReview('{{ $review->review_id }}')">Edit</button>
+                    <button class="delete" id="{{$review->review_id}}delete" onclick="deleteReview('{{ $review->review_id }}')">Delete</button>
                 </div>
             </div>
             @endforeach

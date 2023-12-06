@@ -4,4 +4,11 @@
 
 .profileName{
     margin-left: 2%;
+    font-weight: lighter;
+}
+
+.reviewTitle {
+    margin: 4% 4% 4% 1%;
+    font-size: 150%;
+    font-weight: bold;
 }

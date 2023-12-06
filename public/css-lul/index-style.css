@@ -33,6 +33,7 @@ body{
     margin: 0 auto;
     object-fit: cover;
     border-radius: 2%;
+    aspect-ratio: auto;
 }
 
 .grid-item {
@@ -156,6 +157,7 @@ body{
     width: 60%;
     margin: 2% auto;
     padding: 2% 5%;
+    border-radius: 2rem;
 }
 
 .rating{
@@ -238,9 +240,6 @@ p.featured-snippet {
 
 .game img{
     width: 100%;
-    height: auto;
-    width: 300px;
-    height: 200px;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
 }
