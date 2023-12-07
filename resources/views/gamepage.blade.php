@@ -51,9 +51,9 @@
             Highlighted User Reviews:
             <ul id="user_reviews">
                 <!-- Bad attempt at skeleton -->
-                <li>Fetching ... </li>
-                <li>Fetching ... </li>
-                <li>Fetching ... </li>
+                <li class="fetching_skeleton">Fetching ... </li>
+                <li class="fetching_skeleton">Fetching ... </li>
+                <li class="fetching_skeleton">Fetching ... </li>
             </ul>
             @guest
             <button class="review-page-button" onclick="document.location.href='{{$game->name}}/rating'">

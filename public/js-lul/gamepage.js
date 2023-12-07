@@ -28,9 +28,15 @@ function getRandomReviews(array) {
     const selectedReviews = getRandomReviews(allReviews);
     user_reviews.innerHTML = "";
     selectedReviews.forEach((i) => {
-        const reviewContent = document.createElement("li");
+        const reviewList = document.createElement("li");
+        const reviewContent = document.createElement("p");
+        const reviewRating = document.createElement("p");
+        reviewList.className = "review_content";
         reviewContent.textContent = allReviews[i].content;
-        user_reviews.appendChild(reviewContent);
+        reviewRating.textContent = "Rating: " + allReviews[i].rating + "/5";
+        reviewList.appendChild(reviewContent);
+        reviewList.appendChild(reviewRating);
+        user_reviews.appendChild(reviewList);
     })
 
 }
