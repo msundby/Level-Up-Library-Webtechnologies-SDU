@@ -37,7 +37,7 @@ img {
     width: min(90%, 60rem);
     margin-inline: auto;
     padding: max(3vh, 1rem);
-    padding-top: 10% !important;
+    padding-top: 4%;
     background-color: #1D1128;
     opacity: 90%;
     border-bottom-left-radius: 0.8rem;
