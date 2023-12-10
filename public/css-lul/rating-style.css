@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     color: black;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -125,8 +126,9 @@ body{
 
     .review {
         background-color: #cbd5e0;
-        padding: 5%;
-        border: .2rem black solid;
+        padding: 10%;
+        border: .1rem black solid;
+        border-radius: 5px;
     }
 
     .metaData {
