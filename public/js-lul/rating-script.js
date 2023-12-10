@@ -15,7 +15,7 @@ async function getReviews() {
         reviewContent.textContent = review.content;
         reviewDiv.appendChild(reviewContent);
         const reviewMetaData = document.createElement("p");
-        const reviewMetaDataString = "| User: #" + review.user_id + " | Platform: " + review.platform + " | Rating: " + review.rating + " |";
+        const reviewMetaDataString = "| Written by: " + review.name + " | Platform: " + review.platform + " | Rating: " + review.rating + " |";
         reviewMetaData.textContent = reviewMetaDataString;
         reviewMetaData.className = "metaData";
         reviewDiv.appendChild(reviewMetaData);
