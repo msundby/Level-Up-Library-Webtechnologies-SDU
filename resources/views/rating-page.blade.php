@@ -20,7 +20,7 @@
             <form id="submit_form" action="review" method="POST">
                 @csrf
                 <p>Title</p>
-                <input type="text" id="title" name="title" placeholder="A fancy title?">
+                <input type="text" id="title" name="title" placeholder="A fancy title?" maxlength="255">
                 <p>Platform</p>
                 <select id="platform" name="platform">
                     <option value="PS4">PS4</option>
