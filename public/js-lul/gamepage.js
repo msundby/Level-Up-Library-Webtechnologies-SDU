@@ -32,7 +32,7 @@ function getRandomReviews(array) {
         const reviewContent = document.createElement("p");
         const reviewRating = document.createElement("p");
         reviewList.className = "review_content";
-        reviewContent.textContent = allReviews[i].content;
+        reviewContent.textContent = allReviews[i].name + ": " + allReviews[i].content;
         reviewRating.textContent = "Rating: " + allReviews[i].rating + "/5";
         reviewList.appendChild(reviewContent);
         reviewList.appendChild(reviewRating);
