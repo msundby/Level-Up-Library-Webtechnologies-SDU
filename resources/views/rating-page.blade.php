@@ -20,7 +20,7 @@
             <form id="submit_form" action="review" method="POST">
                 @csrf
                 <p>Title</p>
-                <input type="text" id="title" name="title">
+                <input type="text" id="title" name="title" placeholder="A fancy title?">
                 <p>Platform</p>
                 <select id="platform" name="platform">
                     <option value="PS4">PS4</option>
@@ -30,7 +30,7 @@
                     <option value="PC">PC</option>
                 </select>
                 <p>Content</p>
-                <input type="text" id="content" name="content" maxlength="255">
+                <textarea type="text" rows="5" cols="33" maxlength="255" class="textContent" placeholder="Write your review..."></textarea>
                 <p>Rating<span class="red_highlight">*</span></p>
                 <select id="rating" name="rating">
                     <option value="1">1</option>
