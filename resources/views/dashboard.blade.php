@@ -1,10 +1,4 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight profileName">
-            {{ auth()->user()->name }}'s Profile
-        </h2>
-    </x-slot>
-    <!-- This code has a bug, if you open all the edits of a line -->
     <div class="wrapper">
         <h3 class = reviewTitle>My Reviews</h3>
         <div class="user-reviews">
