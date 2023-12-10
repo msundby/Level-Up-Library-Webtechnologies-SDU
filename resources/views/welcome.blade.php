@@ -85,12 +85,13 @@
     </article>
 </section>
 
-
+<div class="fixed-container">
 <section class="game_collection">
     <div class="grid" id="gridGamesNewestGames">
     <h1 class="headliner">NEWEST GAMES</h1>
         </div>
 </section>
+</div>
 
 
 
