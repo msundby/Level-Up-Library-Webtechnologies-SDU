@@ -36,11 +36,13 @@
 
 
 
-
+<div class="fixed-container">
 <section class="game_collection">
     <div class="grid" id="gridGamesTopRated">
     <h1 class="headliner">BEST RATED GAMES</h1>
+        </div>
 </section>
+</div>
 
 <div class="favorite">
     <h1 class="headliner1">OUR FAVORITES RIGHT NOW</h1>
@@ -87,6 +89,7 @@
 <section class="game_collection">
     <div class="grid" id="gridGamesNewestGames">
     <h1 class="headliner">NEWEST GAMES</h1>
+        </div>
 </section>
 
 
