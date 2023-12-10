@@ -61,9 +61,10 @@ form .data input{
     width: 100%;
     font-size: 18px;
     border: 1px solid black;
-    font-weight: 300;
+    font-weight: bold;
     font-family: 'Prompt';
     text-align: center;
+    color: black;
 }
 
 form .forgot-password{
