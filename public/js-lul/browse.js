@@ -10,6 +10,8 @@ async function getAllGames(){
 async function createGameElements(){
     const fetchedGames = await getAllGames();
     const allGames = document.getElementById("allgames");
+    const loading = document.getElementById("loading");
+    loading.style.display = "none";
 
     fetchedGames.forEach((game) => {
         const gameContainer = document.createElement('article');
