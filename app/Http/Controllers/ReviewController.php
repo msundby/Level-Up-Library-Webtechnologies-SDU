@@ -65,8 +65,6 @@ class ReviewController extends Controller
         $game_id = $gameByName->game_id;
 
         $response = DB::table('reviews')->join('users', 'reviews.user_id', '=', 'users.id')->where('game_id', $game_id)->select('reviews.*', 'users.name')->get();
-//            DB::select('select * from reviews where game_id = :game_id');
-//        ['game_id' => $game_id];
         return $response;
     }
 

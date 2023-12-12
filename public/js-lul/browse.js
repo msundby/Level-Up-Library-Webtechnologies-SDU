@@ -2,7 +2,12 @@ let searchableGames = [];
 const csrfToken = document.head.querySelector('meta[name="csrf-token"]').content;
 
 async function getAllGames(){
-  const response = await fetch('/games');
+    const response = await fetch('/games', {
+        method: 'GET',
+        headers: {
+            'X-CSRF-TOKEN': csrfToken,
+        },
+    });
   const games = await response.json();
   return games;
 }
