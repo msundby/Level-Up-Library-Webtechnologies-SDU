@@ -61,13 +61,6 @@
             </button>
             @endguest
 
-            @auth
-            <button class="review-page-button" onclick="document.location.href='{{$game->name}}/rating'">
-                Review game
-            </button>
-
-            <button class="review-page-button" onclick="document.location.href='{{$game->name}}/review-page'">See all reviews</button>
-            @endauth
         </div>
     </div>
 
