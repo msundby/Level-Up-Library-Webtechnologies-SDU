@@ -21,6 +21,7 @@
                 <div class="game-description">
                     <p>{{$game->description}}</p>
                 </div>
+                <button class="read-more-button">Read More</button>
             </div>
             <div class="game-image">
                 <a href="#"><img src={{$game->image_link}} id="game-image" alt="image"></a>
@@ -60,13 +61,6 @@
             </button>
             @endguest
 
-            @auth
-            <button class="review-page-button" onclick="document.location.href='{{$game->name}}/rating'">
-                Review game
-            </button>
-
-            <button class="review-page-button" onclick="document.location.href='{{$game->name}}/review-page'">See all reviews</button>
-            @endauth
         </div>
     </div>
 
