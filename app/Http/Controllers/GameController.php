@@ -64,10 +64,6 @@ class GameController extends Controller
         return view('rating-page', ['game' => $game]);
     }
 
-    public function showReviewPage($name) {
-        $game = DB::table('games')->where('name', $name)->first();
-        $reviews = DB::table('reviews')->select('title', 'rating', 'review_id')->where('game_id', $game->game_id);
-        return view('review-page', ['']);
 
 
     /**

@@ -54,7 +54,6 @@ Route::get('/gamepage/{name}', [GameController::class,'show']);
 Route::get('/gamepage/{name}/rating', [GameController::class,'rate']);
 Route::get('/gamepage/{name}/review', [ReviewController::class, 'fetchByGame']);
 Route::post('/gamepage/{name}/review', [ReviewController::class, 'insertOne']);
-Route::get('/gamepage/{name}/review-page', [GameController::class, 'showReviewPage']);
 //Route::get('/gamepage/{id}', function() {
 //    return view('gamepage');
 //});
