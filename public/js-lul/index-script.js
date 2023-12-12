@@ -77,7 +77,7 @@ async function createGameElements(divName) {
         const roundedRating = parseFloat(game.aggregate_rating).toFixed(2);
         ratingGrid.textContent = roundedRating + "/5";
 
-        gridContainer.className = 'grid';
+        gridContainer.className = 'game_container';
 
 
         gridItem.appendChild(imageLink);
