@@ -42,7 +42,7 @@ async function getAllGamesSortByNewest(){
 
 async function createGameElements(divName) {
     let sortedGames = [];
-    if(divName === "gridGamesTopRated"){
+    if(divName === "game_container"){
         sortedGames = await getAllGamesSortByRating();
     } else if (divName === "gridGamesNewestGames"){
         sortedGames = await getAllGamesSortByNewest();
@@ -89,5 +89,5 @@ async function createGameElements(divName) {
     }));
 }
 
-createGameElements("gridGamesTopRated");
+createGameElements("game_container");
 createGameElements("gridGamesNewestGames");

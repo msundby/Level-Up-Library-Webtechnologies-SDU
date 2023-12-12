@@ -151,14 +151,6 @@ body{
     width: 100%;
 }
 
-.game_collection {
-    background-color: whitesmoke;
-    width: fit-content;
-    margin: 2% auto;
-    padding: 1% 1% 5% 1%;
-    border-radius: 2rem;
-}
-
 .rating{
     margin-top: -6%;
     border: none;
@@ -381,4 +373,30 @@ p.featured-snippet {
 }
 
 
+/* My Extension */
 
+.game_collection {
+    background-color: whitesmoke;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    margin: 0 4vw;
+
+    /*
+    margin: 2% auto;
+    width: fit-content;
+    padding: 1% 1% 5% 1%;
+     */
+}
+
+.game_container {
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.game_collection::-webkit-scrollbar {
+    display: none;
+}

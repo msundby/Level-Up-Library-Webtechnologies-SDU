@@ -38,9 +38,20 @@
 
 <div class="fixed-container">
 <section class="game_collection">
-    <div class="grid" id="gridGamesTopRated">
     <h1 class="headliner">BEST RATED GAMES</h1>
+    <button class="pre-btn"><img src="public/img/arrow.png" alt=""></button>
+    <button class="nxt-btn"><img src="public/img/arrow.png" alt=""></button>
+    <div class="game_container">
+        <div>
+            Hej
         </div>
+        <div>
+            Hej
+        </div>
+        <div>
+            Hej
+        </div>
+    </div>
 </section>
 </div>
 
