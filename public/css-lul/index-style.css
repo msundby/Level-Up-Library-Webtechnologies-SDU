@@ -19,7 +19,7 @@ body{
     margin: 0% 0%;
     grid-gap: 2%;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2,2fr);
+    grid-template-rows: repeat(2,1fr);
     justify-content: center;
     transition: filter 0.3s ease;
     max-width: 80vw;
