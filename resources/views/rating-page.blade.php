@@ -30,7 +30,7 @@
                     <option value="PC">PC</option>
                 </select>
                 <p>Content</p>
-                <textarea type="text" rows="5" cols="33" maxlength="255" class="textContent" placeholder="Write your review..."></textarea>
+                <textarea name="content" id="content" type="text" rows="5" cols="33" maxlength="255" class="textContent" placeholder="Write your review..."></textarea>
                 <p>Rating<span class="red_highlight">*</span></p>
                 <select id="rating" name="rating">
                     <option value="1">1</option>
