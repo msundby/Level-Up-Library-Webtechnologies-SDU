@@ -32,7 +32,7 @@ class ReviewController extends Controller
     function insertOne(Request $request, $gameName) {
         if (auth()->user() == null) {
             // Try catch if user is not logged in
-            //TODO: Add redirect to log in page
+            //TODO: Could be changed to redirect to login if it fits
             return redirect('/');
         }
         $gameByName = DB::table('games')->where('name', $gameName)->first();
@@ -42,9 +42,9 @@ class ReviewController extends Controller
         $platform = $request->get('platform');
         $content = $request->get('content');
         $rating = $request->get('rating');
-        DB::insert('insert into reviews (user_id, game_id, title, platform, content, rating) values (?, ?, ?, ?, ?, ?)', [$user_id, $game_id, $title, $platform, $content, $rating]);
+        DB::insert('insert into reviews (user_id, game_id, title, platform, content, rating) values (?, ?, ?, ?, ?, ?)',
+                    [$user_id, $game_id, $title, $platform, $content, $rating]);
         return Redirect::to(url()->previous());
-        //return [$request, $game_id];
     }
 
     function fetchFromID($userid) {
@@ -65,8 +65,6 @@ class ReviewController extends Controller
         $game_id = $gameByName->game_id;
 
         $response = DB::table('reviews')->join('users', 'reviews.user_id', '=', 'users.id')->where('game_id', $game_id)->select('reviews.*', 'users.name')->get();
-//            DB::select('select * from reviews where game_id = :game_id');
-//        ['game_id' => $game_id];
         return $response;
     }
 

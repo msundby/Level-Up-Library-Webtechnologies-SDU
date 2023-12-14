@@ -2,6 +2,7 @@ async function getReviews() {
     const fetchData = await fetch('./review');
     const data = await fetchData.json();
     const other_reviews = document.getElementById("other_reviews");
+
     console.log(data);
 
     data.forEach((review) => {

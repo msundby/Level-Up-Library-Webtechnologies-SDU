@@ -17,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::post('/review', [ReviewController::class, 'insertOne']);
+Route::delete('/review/{id}', [ReviewController::class, 'deleteOne']);
+Route::put('/review/{id}', [ReviewController::class, 'updateOne']);
+
+Route::post('/gamepage/{name}/review', [ReviewController::class, 'insertOne']);
+Route::get('/gamepage/{name}/review', [ReviewController::class, 'fetchByGame']);
+
+

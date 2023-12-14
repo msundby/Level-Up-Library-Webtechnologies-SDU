@@ -90,6 +90,14 @@ class GameController extends Controller
         //
     }
 
+
+    public function showReviewPage($name) {
+        $gameByName = DB::table('games')->where('name', $name)->first();
+        $game_id = $gameByName->game_id;
+        $response = DB::table('reviews')->join('users', 'reviews.user_id', '=', 'users.id')->where('game_id', $game_id)->select('reviews.*', 'users.name')->get();
+        return view('review-page', ['reviews' => $response, 'game' => $gameByName]);
+    }
+
     public function topPicks() {
         $topPicks = DB::table('games')
             ->orderBy('aggregate_rating', 'desc')

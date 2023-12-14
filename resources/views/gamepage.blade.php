@@ -55,15 +55,15 @@
                 <li class="fetching_skeleton">Fetching ... </li>
             </ul>
             @guest
-            <button class="review-page-button" onclick="document.location.href='{{$game->name}}/rating'">
+            <button class="review-page-button" onclick="document.location.href='/login'">
                 Login to review this game
             </button>
             @endguest
-
             @auth
             <button class="review-page-button" onclick="document.location.href='{{$game->name}}/rating'">
                 Review game
             </button>
+            <button class="review-page-button" onclick="document.location.href='{{$game->name}}/review-page'">See all reviews</button>
             @endauth
         </div>
     </div>

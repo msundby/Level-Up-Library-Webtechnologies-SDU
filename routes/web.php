@@ -37,26 +37,15 @@ Route::get('/review', [ReviewController::class, 'fetchAll']);
 Route::get('/review/{userid}', [ReviewController::class, 'fetchFromID']);
 
 //API as well, but for inserting some data
-Route::post('/review', [ReviewController::class, 'insertOne']);
-Route::delete('/review/{id}', [ReviewController::class, 'deleteOne']);
-Route::put('/review/{id}', [ReviewController::class, 'updateOne']);
 
 
-/*TODO:
-    1. Implement custom error page
-    2. Route pages here, with try catch
-*/
-Route::get('/error', [ErrorController::class, 'index']);
-Route::get('/error/{error}', [ErrorController::class, 'knownError']);
+
 
 //All relevant routes for the gamepage and the reviews here of
 Route::get('/gamepage/{name}', [GameController::class,'show']);
 Route::get('/gamepage/{name}/rating', [GameController::class,'rate']);
-Route::get('/gamepage/{name}/review', [ReviewController::class, 'fetchByGame']);
-Route::post('/gamepage/{name}/review', [ReviewController::class, 'insertOne']);
-//Route::get('/gamepage/{id}', function() {
-//    return view('gamepage');
-//});
+Route::get('/gamepage/{name}/review-page', [GameController::class, 'showReviewPage']);
+
 
 Route::get('/top-picks', [GameController::class,'topPicks']);
 

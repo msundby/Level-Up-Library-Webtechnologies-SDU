@@ -12,9 +12,7 @@
         @include('nav-bar')
     </header>
 <body>
-
-<div class="loader" id="loader"></div>
-
+<img id="loading" src="{{ asset('img/LoadSlot.gif') }}">
 <div id="allgames">
 
 </div>
