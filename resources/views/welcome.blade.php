@@ -32,9 +32,6 @@
 </section>
 </div>
 
-<div class="underbar"></div>
-
-
 
 <div class="fixed-container">
 <section class="game_collection">

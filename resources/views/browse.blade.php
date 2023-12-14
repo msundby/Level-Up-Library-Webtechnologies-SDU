@@ -13,6 +13,8 @@
     </header>
 <body>
 
+<div class="loader" id="loader"></div>
+
 <div id="allgames">
 
 </div>
