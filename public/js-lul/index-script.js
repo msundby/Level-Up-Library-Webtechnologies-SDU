@@ -42,7 +42,7 @@ async function getAllGamesSortByNewest(){
 
 async function createGameElements(divName) {
     let sortedGames = [];
-    if(divName === "game_container"){
+    if(divName === "carousel_container"){
         sortedGames = await getAllGamesSortByRating();
     } else if (divName === "gridGamesNewestGames"){
         sortedGames = await getAllGamesSortByNewest();
@@ -77,7 +77,7 @@ async function createGameElements(divName) {
         const roundedRating = parseFloat(game.aggregate_rating).toFixed(2);
         ratingGrid.textContent = roundedRating + "/5";
 
-        gridContainer.className = 'game_container';
+        gridContainer.className = 'carousel_container';
 
 
         gridItem.appendChild(imageLink);
@@ -89,5 +89,5 @@ async function createGameElements(divName) {
     }));
 }
 
-createGameElements("game_container");
+createGameElements("carousel_container");
 createGameElements("gridGamesNewestGames");

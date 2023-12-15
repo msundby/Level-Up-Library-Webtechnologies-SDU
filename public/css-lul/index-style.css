@@ -359,26 +359,9 @@ p.featured-snippet {
     border-radius: 2rem;
     position: relative;
     overflow: hidden;
-    padding: 20px;
-    margin: 0 10vw;
-
-    /*
     margin: 2% auto;
     width: fit-content;
     padding: 1% 1% 5% 1%;
-     */
-}
-
-.game_container {
-    padding: 0 10vw;
-    display: flex;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    overflow-y: hidden;
-}
-
-.game_collection::-webkit-scrollbar {
-    display: none;
 }
 
 .pre-btn, .nxt-btn {

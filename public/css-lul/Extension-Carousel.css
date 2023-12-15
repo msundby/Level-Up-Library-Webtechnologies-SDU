@@ -1,0 +1,20 @@
+.carousel_collection {
+    background-color: whitesmoke;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    margin: 0 10vw;
+}
+
+.carousel_container {
+    padding: 0 10vw;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+}
+
+.carousel_collection::-webkit-scrollbar {
+    display: none;
+}

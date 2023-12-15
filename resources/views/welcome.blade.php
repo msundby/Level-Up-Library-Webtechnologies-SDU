@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e7bbbc0c8d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('css-lul/index-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css-lul/Extension-Carousel.css') }}">
     <script defer src="{{ asset('js-lul/index-script.js') }}"></script>
     <script defer src="{{ asset('js-lul/itemCarousel.js') }}"></script>
 
@@ -38,11 +39,11 @@
 
 
 <div class="fixed-container">
-<section class="game_collection">
+<section class="carousel_collection">
     <h1 class="headliner">BEST RATED GAMES</h1>
     <button class="pre-btn"><img src="img/arrow.png" alt=""></button>
     <button class="nxt-btn"><img src="img/arrow.png" alt=""></button>
-    <div class="game_container" id="game_container">
+    <div class="carousel_container" id="carousel_container">
     </div>
 </section>
 </div>
