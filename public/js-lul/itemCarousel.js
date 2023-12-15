@@ -1,4 +1,4 @@
-const productContainers = [...document.querySelectorAll('.game_container')];
+const productContainers = [...document.querySelectorAll('.carousel_container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
 const preBtn = [...document.querySelectorAll('.pre-btn')];
 

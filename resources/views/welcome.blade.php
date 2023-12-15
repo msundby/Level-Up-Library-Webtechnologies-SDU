@@ -43,7 +43,7 @@
     <h1 class="headliner">BEST RATED GAMES</h1>
     <button class="pre-btn"><img src="img/arrow.png" alt=""></button>
     <button class="nxt-btn"><img src="img/arrow.png" alt=""></button>
-    <div class="carousel_container" id="carousel_container">
+    <div class="carousel_container item_container" id="carousel_container">
     </div>
 </section>
 </div>
@@ -92,8 +92,8 @@
 <div class="fixed-container">
 <section class="game_collection">
     <div class="grid" id="gridGamesNewestGames">
-    <h1 class="headliner">NEWEST GAMES</h1>
-        </div>
+        <h1 class="headliner">NEWEST GAMES</h1>
+    </div>
 </section>
 </div>
 

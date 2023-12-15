@@ -42,14 +42,14 @@ async function getAllGamesSortByNewest(){
 
 async function createGameElements(divName) {
     let sortedGames = [];
+    const gridContainer = document.getElementById(divName);
     if(divName === "carousel_container"){
         sortedGames = await getAllGamesSortByRating();
+        gridContainer.className = 'carousel_container';
     } else if (divName === "gridGamesNewestGames"){
         sortedGames = await getAllGamesSortByNewest();
+        gridContainer.className = 'grid';
     }
-
-    const gridContainer = document.getElementById(divName);
-
 
     sortedGames.forEach((game => {
 
@@ -76,9 +76,6 @@ async function createGameElements(divName) {
         imageTitle.textContent = game.name;
         const roundedRating = parseFloat(game.aggregate_rating).toFixed(2);
         ratingGrid.textContent = roundedRating + "/5";
-
-        gridContainer.className = 'carousel_container';
-
 
         gridItem.appendChild(imageLink);
         overlayItem.appendChild(imageTitle);
