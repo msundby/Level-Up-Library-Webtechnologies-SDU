@@ -1,4 +1,3 @@
-let searchableGames = [];
 const csrfToken = document.head.querySelector('meta[name="csrf-token"]').content;
 
 
@@ -66,11 +65,7 @@ async function getGames() {
         },
     });
     const data = await fetchData.json();
-
-    data.forEach((game) => {
-        searchableGames.push(game);
-    })
-    console.log(searchableGames);
+    console.log(data);
 }
 
 function displaySearchedGames(searchGames) {
@@ -111,7 +106,10 @@ function displaySearchedGames(searchGames) {
 }
 
 const searchbar = document.getElementById('searchbar');
-searchbar.addEventListener('keyup', () => {
-    let foundgames = searchableGames.filter(e => e.name.toUpperCase().includes(searchbar.value.toUpperCase()));
-    displaySearchedGames(foundgames);
+searchbar.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        // const currentURL = window.location.href;
+        // console.log(currentURL);
+        window.location.href = "gamepage/" + searchbar.value;
+    }
 });
