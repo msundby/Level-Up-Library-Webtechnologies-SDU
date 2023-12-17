@@ -14,16 +14,20 @@
 <body>
 <div id="allgames">
     @foreach ($games as $game)
-    <div class="grid-item">
-        <img id="{{$game->game_id}}img" src="{{ $game->image_link }}">
+    <article id="game_container">
+        <a href="/gamepage/{{$game->name}}">
+            <img class="img" src={{$game->image_link}}>
+        </a>
         <div class="overlay">
             <div class="overlay-content">
-                <h3 class="image-title">Resident Evil 4</h3>
-                <div class="rating-grid">
+                <h3 id="featured-title"><a id="titleLink" style="text-decoration: none; color: inherit;" href="/gamepage/{{$game->name}}">{{$game->name}}</a></h3>
+                <p id="featured-snippet">{{$game->description}}</p>
+                <div id="rating">
+                    <h3>Rating: {{$game->aggregate_rating}}<label id="rating"></label></h3>
                 </div>
             </div>
         </div>
-    </div>
+    </article>
     @endforeach
 </div>
 
