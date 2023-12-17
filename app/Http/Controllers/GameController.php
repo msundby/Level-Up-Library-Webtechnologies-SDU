@@ -24,7 +24,7 @@ class GameController extends Controller
 
     public function index()
     {
-        return Game::all();
+        return DB::table('games')->join('tag', 'games.tag', '=', 'tag.tag_id')->select('games.*', 'tag.name AS tag_name')->get();
     }
 
     /**

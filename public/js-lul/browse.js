@@ -112,6 +112,14 @@ function displaySearchedGames(searchGames) {
 
 const searchbar = document.getElementById('searchbar');
 searchbar.addEventListener('keyup', () => {
-    let foundgames = searchableGames.filter(e => e.name.toUpperCase().includes(searchbar.value.toUpperCase()));
-    displaySearchedGames(foundgames);
+    let foundgamesByName = searchableGames.filter(e => e.name.toUpperCase().includes(searchbar.value.toUpperCase()));
+    let foundgamesByTag = searchableGames.filter(e => e.tag_name.toUpperCase().includes(searchbar.value.toUpperCase()));
+    let foundGames = foundgamesByTag
+    foundgamesByName.forEach((game) => {
+        if (!foundGames.includes(game)) {
+            foundGames.push(game);
+        }
+    })
+    console.log(foundGames);
+    displaySearchedGames(foundGames);
 });
