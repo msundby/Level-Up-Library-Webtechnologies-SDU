@@ -27,6 +27,12 @@ class GameController extends Controller
         return Game::all();
     }
 
+    public function indexWithPagination(){
+        $games = Game::paginate(15);
+
+        return view('browse',['games'=>$games]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */

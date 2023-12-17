@@ -12,10 +12,22 @@
         @include('nav-bar')
     </header>
 <body>
-<img id="loading" src="{{ asset('img/LoadSlot.gif') }}">
 <div id="allgames">
-
+    @foreach ($games as $game)
+    <div class="grid-item">
+        <img id="{{$game->game_id}}img" src="{{ $game->image_link }}">
+        <div class="overlay">
+            <div class="overlay-content">
+                <h3 class="image-title">Resident Evil 4</h3>
+                <div class="rating-grid">
+                </div>
+            </div>
+        </div>
+    </div>
+    @endforeach
 </div>
 
+
+{{ $games->links() }}
 </body>
 </html>

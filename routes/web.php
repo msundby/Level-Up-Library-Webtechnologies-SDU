@@ -64,6 +64,8 @@ Route::get('/browse', function () {
     return view('browse');
 });
 
+Route::get('/browse',[GameController::class,'indexWithPagination']);
+
 Route::get('/testing', [TestingController::class, 'showReviewByAuthenticatedUser']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])
