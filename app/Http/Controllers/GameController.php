@@ -27,10 +27,27 @@ class GameController extends Controller
         return Game::all();
     }
 
-    public function indexWithPagination(){
-        $games = Game::paginate(15);
 
-        return view('browse',['games'=>$games]);
+    public function indexWithPagination(Request $request){
+        $findGames = Game::query();
+
+        $sort = $request->input('sort');
+        $order = $request->input('order', 'asc');
+
+        if($sort){
+            $findGames->orderBy($sort, $order);
+        }
+
+        $search = $request->input('search');
+        if($search){
+            $findGames->where('name', 'ilike', '%'.$search.'%');
+        }
+
+        $games = $findGames->paginate(15);
+
+        return view('browse', [
+            'games'=>$games,
+            'search'=>$search]);
     }
 
     /**
