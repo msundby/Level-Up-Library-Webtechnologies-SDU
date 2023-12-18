@@ -1,5 +1,5 @@
-let searchableGames = [];
 const csrfToken = document.head.querySelector('meta[name="csrf-token"]').content;
+
 
 async function getAllGames(){
     const response = await fetch('/games', {
@@ -23,7 +23,6 @@ async function createGameElements(){
         gameContainer.id = 'game';
 
         gameContainer.addEventListener('click', () => {
-            // Redirect to the game page with the specific ID
             window.location.href = `/gamepage/${game.name}`;
         });
 
@@ -36,11 +35,6 @@ async function createGameElements(){
 
         const rating = document.createElement('div');
         rating.id = 'rating';
-        const span1 = document.createElement('span');
-        const span2 = document.createElement('span');
-        const span3 = document.createElement('span');
-        const span4 = document.createElement('span');
-        const span5 = document.createElement('span');
 
         image.src = game['image_link'];
         name.textContent = game.name;
@@ -61,6 +55,8 @@ async function createGameElements(){
 
 }
 
+getGames().then(createGameElements);
+
 async function getGames() {
     const fetchData = await fetch('/games', {
         method: 'GET',
@@ -69,11 +65,7 @@ async function getGames() {
         },
     });
     const data = await fetchData.json();
-
-    data.forEach((game) => {
-        searchableGames.push(game);
-    })
-    console.log(searchableGames);
+    console.log(data);
 }
 
 function displaySearchedGames(searchGames) {
@@ -84,7 +76,6 @@ function displaySearchedGames(searchGames) {
         gameContainer.id = 'game';
 
         gameContainer.addEventListener('click', () => {
-            // Redirect to the game page with the specific ID
             window.location.href = `/gamepage/${game.name}`;
         });
 
@@ -96,11 +87,6 @@ function displaySearchedGames(searchGames) {
         description.id = 'featured-snippet';
         const rating = document.createElement('div');
         rating.id = 'rating';
-        const span1 = document.createElement('span');
-        const span2 = document.createElement('span');
-        const span3 = document.createElement('span');
-        const span4 = document.createElement('span');
-        const span5 = document.createElement('span');
 
         image.src = game['image_link'];
         const roundedRating = parseFloat(game.aggregate_rating).toFixed(2);
@@ -120,11 +106,10 @@ function displaySearchedGames(searchGames) {
 }
 
 const searchbar = document.getElementById('searchbar');
-searchbar.addEventListener('keyup', () => {
-    let foundgames = searchableGames.filter(e => e.name.toUpperCase().includes(searchbar.value.toUpperCase()));
-    displaySearchedGames(foundgames);
+searchbar.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        // const currentURL = window.location.href;
+        // console.log(currentURL);
+        window.location.href = "gamepage/" + searchbar.value;
+    }
 });
-
-getGames();
-
-createGameElements();

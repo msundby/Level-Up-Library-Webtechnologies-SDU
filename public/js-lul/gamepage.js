@@ -1,6 +1,3 @@
-//TODO: THIS SHOULD REALLY BE DONE IN THE DATABASE, TO OPTIMIZE PERFORMANCE
-//Fixed the freeze! which i gloriously introduced myself
-
 async function getReviews() {
     const gameName = document.getElementById('gameName').textContent;
     const fetchData = await fetch(`${gameName}/review`);

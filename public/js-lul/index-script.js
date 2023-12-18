@@ -57,11 +57,11 @@ async function createGameElements(divName) {
         gridItem.className = 'grid-item';
 
         gridItem.addEventListener('click', () => {
-            // Redirect to the game page with the specific ID
+
             window.location.href = `/gamepage/${game.name}`;
         });
 
-        const imageLink = document.createElement("img")
+        const imageLink = document.createElement("img");
         const overlay = document.createElement("div");
         overlay.className = 'overlay';
         const overlayItem = document.createElement("div");

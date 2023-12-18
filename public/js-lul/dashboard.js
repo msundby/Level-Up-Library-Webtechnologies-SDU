@@ -1,4 +1,3 @@
-// Retrieve the CSRF token from the meta tag
 const csrfToken = document.head.querySelector('meta[name="csrf-token"]').content;
 
 function deleteReview(reviewId) {
@@ -11,10 +10,10 @@ function deleteReview(reviewId) {
         .then(response => {
             if (response.ok) {
                 document.getElementById(reviewId + "div").remove();
-                // Assuming successful deletion, you can handle the UI changes or redirects here
+
                 console.log(`Review with ID ${reviewId} deleted successfully.`);
             } else {
-                // Handle errors here
+
                 console.error('Error deleting review:', response.statusText);
             }
         })
@@ -77,7 +76,7 @@ function editReview(reviewId) {
                 throw new Error("Rating must be an integer between 1 and 5");
             }
 
-            // Convert the float to an integer
+
             rating = parseInt(rating);
 
             fetch(`/review/${reviewId}`, {
@@ -100,7 +99,7 @@ function editReview(reviewId) {
                 });
 
         } catch (error) {
-            // Display error message in the rating input field
+
             alert(error.message);
             return;
         }
