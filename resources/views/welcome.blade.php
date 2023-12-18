@@ -40,10 +40,10 @@
 
 <div class="fixed-container">
 <section class="carousel_collection">
-    <h1 class="headliner">BEST RATED GAMES</h1>
+    <h1 class="carousel_header">BEST RATED GAMES</h1>
     <button class="pre-btn"><img src="img/arrow.png" alt=""></button>
     <button class="nxt-btn"><img src="img/arrow.png" alt=""></button>
-    <div class="carousel_container item_container" id="carousel_container">
+    <div class="carousel_container" id="carousel_container">
     </div>
 </section>
 </div>

@@ -19,7 +19,7 @@ body{
     margin: 0% 0%;
     grid-gap: 2%;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2,2fr);
+    grid-template-rows: repeat(2,1fr);
     justify-content: center;
     transition: filter 0.3s ease;
     max-width: 80vw;
@@ -34,6 +34,24 @@ body{
     object-fit: cover;
     border-radius: 2%;
     aspect-ratio: auto;
+}
+
+.grid-item {
+    position: relative; /*Placerer hover-effekten/kassen samt titlen og rating stjernene relativt til det specifikke grid*/
+    overflow: hidden; /*Sørger for at tekst ikke ryger udover griddet*/
+}
+
+.grid-item:hover img {
+    filter: brightness(0.6); /*Bestemmer filterets/hover-effektens styrke*/
+}
+
+.grid-item:hover .overlay {
+    opacity: 1;
+}
+
+.grid-item:hover{
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
 .overlay {
@@ -121,7 +139,7 @@ body{
     /*font-size: 130%;*/
     /*background-image: linear-gradient(to left, rgba(255, 255, 255, 0), white 10%, white 90%, rgba(255, 255, 255, 0));*/
     /*padding:2%;*/
-    margin: 0 0 2% 0;
+    margin-bottom: 5%;
 
     justify-content: center;
     align-items: center;
@@ -131,6 +149,14 @@ body{
 
 #highest_rated {
     width: 100%;
+}
+
+.game_collection {
+    background-color: whitesmoke;
+    width: fit-content;
+    margin: 2% auto;
+    padding: 1% 1% 5% 1%;
+    border-radius: 2rem;
 }
 
 .rating{
@@ -355,29 +381,4 @@ p.featured-snippet {
 }
 
 
-/* My Extension */
 
-.game_collection {
-    background-color: whitesmoke;
-    border-radius: 2rem;
-    margin: 2% auto;
-    width: fit-content;
-    padding: 1% 1% 5% 1%;
-}
-
-
-
-
-
-.grid-item:hover img {
-    filter: brightness(0.6); /*Bestemmer filterets/hover-effektens styrke*/
-}
-
-.grid-item:hover .overlay {
-    opacity: 1;
-}
-
-.grid-item:hover{
-    transform: scale(1.02);
-    cursor: pointer;
-}

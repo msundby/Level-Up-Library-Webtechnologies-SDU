@@ -2,7 +2,6 @@
     background-color: whitesmoke;
     border-radius: 2rem;
     position: relative;
-    overflow: hidden;
     padding: 20px;
     margin: 0 10vw;
 }
@@ -10,13 +9,14 @@
 .carousel_container {
     padding: 0 2vw;
     display: flex;
-    overflow-x: hidden;
     scroll-behavior: smooth;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
-.carousel_container::-webkit-scrollbar {
-    display: none;
+.carousel_header {
+    text-align: center;
+    margin-bottom: 3vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .pre-btn, .nxt-btn {
@@ -44,10 +44,6 @@
 }
 
 .grid-item {
-    position: relative;
-    overflow: hidden;
-
-    /* Added for Extension */
     flex: 0 0 auto;
-    margin-right: 40px;
+    margin: 0 15px;
 }
