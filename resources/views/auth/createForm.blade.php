@@ -19,6 +19,13 @@
             <label for="show" class="closebtn fas fa-times" title="close" onclick="closeCreate()"></label>
             <div class="text">Create Account</div>
 
+            @if ($errors->any())
+                <div id="validationMessage">
+            @foreach($errors->all() as $err)
+            <li style="color: red">{{$err}}</li>
+            @endforeach
+                </div>
+            @endif
                 <form method ="POST" action="{{ route('register') }}">
                     @csrf
 
@@ -26,7 +33,6 @@
                         <label>Username</label>
                         <input id="name" type="text" name="name" required placeholder="Enter username" value="{{ old('name') }}">
                     </div>
-
                     <div class="data">
                         <label>Email</label>
                         <input id="email" type="email" name="email" required placeholder="Enter email" value="{{ old('email') }}">
