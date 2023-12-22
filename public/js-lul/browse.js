@@ -114,12 +114,6 @@ const searchbar = document.getElementById('searchbar');
 searchbar.addEventListener('keyup', () => {
     let foundgamesByName = searchableGames.filter(e => e.name.toUpperCase().includes(searchbar.value.toUpperCase()));
     let foundgamesByTag = searchableGames.filter(e => e.tag_name.toUpperCase().includes(searchbar.value.toUpperCase()));
-    let foundGames = foundgamesByTag
-    foundgamesByName.forEach((game) => {
-        if (!foundGames.includes(game)) {
-            foundGames.push(game);
-        }
-    })
-    console.log(foundGames);
+    let foundGames = [...new Set([...foundgamesByName, ...foundgamesByTag])];
     displaySearchedGames(foundGames);
 });
