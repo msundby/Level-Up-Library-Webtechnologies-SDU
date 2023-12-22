@@ -55,7 +55,7 @@ async function createGameElements(){
 
 }
 
-getGames().then(createGameElements);
+getAllGames().then(createGameElements);
 
 async function getGames() {
     const fetchData = await fetch('/games', {
