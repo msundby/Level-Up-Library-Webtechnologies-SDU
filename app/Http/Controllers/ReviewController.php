@@ -28,7 +28,6 @@ class ReviewController extends Controller
 
     }
 
-
     function insertOne(Request $request, $gameName) {
         if (auth()->user() == null) {
             // Try catch if user is not logged in
@@ -36,6 +35,9 @@ class ReviewController extends Controller
             return redirect('/');
         }
         $gameByName = DB::table('games')->where('name', $gameName)->first();
+
+        $this->validateReviewInput($request); #Extension
+
         $game_id = $gameByName->game_id;
         $user_id = auth()->user()->id;
         $title = $request->get('title');
@@ -70,6 +72,15 @@ class ReviewController extends Controller
 
     function deleteOne($review_id){
         Review::where('review_id', $review_id)->first()->delete();
+    }
+
+    public function validateReviewInput(Request $request): void    #Extension
+    {                                                               #Extension
+        $request->validate([                                        #Extension
+            'content' => 'required|min:10|max:255',                 #Extension
+            'rating' => 'required|min:1|max:5',                     #Extension
+            'title' => 'required|min:1|max:50'                      #Extension
+        ]);                                                         #Extension
     }
 
 }

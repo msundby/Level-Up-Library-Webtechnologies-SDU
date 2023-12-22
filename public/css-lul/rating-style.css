@@ -140,3 +140,10 @@ body{
     display: block;
     min-height: 200px; /* or any other value */
 }
+
+/* Extension */
+#characterCounter {
+    margin: 0;
+    text-align: right;
+    font-size: 11px;
+}

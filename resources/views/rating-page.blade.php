@@ -31,6 +31,7 @@
                 </select>
                 <p>Content</p>
                 <textarea name="content" id="content" type="text" rows="5" cols="33" maxlength="255" class="textContent" placeholder="Write your review..."></textarea>
+                <p id="characterCounter">0/255 characters</p>                        <!-- Extension -->
                 <p>Rating<span class="red_highlight">*</span></p>
                 <select id="rating" name="rating">
                     <option value="1">1</option>
@@ -42,6 +43,15 @@
                 <input id="review_submit" type="submit" value="Submit">
             </form>
         </div>
+        @if ($errors -> any())                                                      <!-- Extension -->
+        <div>                                                                       <!-- Extension -->
+            @foreach ($errors->all() as $error)                                     <!-- Extension -->
+            <li style="list-style-type: none; color: red">                          <!-- Extension -->
+                {{ $error }}                                                        <!-- Extension -->
+            </li>                                                                   <!-- Extension -->
+            @endforeach                                                             <!-- Extension -->
+        </div>                                                                      <!-- Extension -->
+        @endif                                                                      <!-- Extension -->
     </div>
     <div class="headline">
         <div class="headline_image">
