@@ -14,7 +14,7 @@
 <body>
 
 <div id="searchDiv">
-<form method="get" action="{{ route('games.browse') }}">
+<form method="GET" action="{{ route('games.browse') }}">
     <input type="text" name="search" placeholder="Search by Name">
     <button type="submit">Search</button>
 </form>
@@ -26,8 +26,6 @@
 <a class ="filter-a" href="{{ route('games.browse', ['sort' => 'aggregate_rating','order' => 'asc','search' => request('search')]) }}">Sort by Rating (Lowest)</a>
 <a class="filter-a" href="{{ route('games.browse', ['sort' => 'release_date', 'order' => 'desc','search' => request('search')]) }}">Sort by Release Date (Newest)</a>
 <a class="filter-a" href="{{ route('games.browse', ['sort' => 'release_date', 'order' => 'asc','search' => request('search')]) }}">Sort by Release Date (Oldest)</a>
-
-
 </div>
 
 <div id="allgames">

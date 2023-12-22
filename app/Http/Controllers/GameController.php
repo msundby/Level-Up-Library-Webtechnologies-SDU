@@ -31,16 +31,17 @@ class GameController extends Controller
     public function indexWithPagination(Request $request){
         $findGames = Game::query();
 
+        $search = $request->input('search');
+
+        if($search){
+            $findGames->where('name', 'ilike', '%'.$search.'%');
+        }
+
         $sort = $request->input('sort');
         $order = $request->input('order', 'asc');
 
         if($sort){
             $findGames->orderBy($sort, $order);
-        }
-
-        $search = $request->input('search');
-        if($search){
-            $findGames->where('name', 'ilike', '%'.$search.'%');
         }
 
         $games = $findGames->paginate(15);
