@@ -1,3 +1,4 @@
+let searchableGames = [];
 const csrfToken = document.head.querySelector('meta[name="csrf-token"]').content;
 
 
@@ -8,8 +9,8 @@ async function getAllGames(){
             'X-CSRF-TOKEN': csrfToken,
         },
     });
-  const games = await response.json();
-  return games;
+    const games = await response.json();
+    return games;
 }
 
 async function createGameElements(){
@@ -65,7 +66,11 @@ async function getGames() {
         },
     });
     const data = await fetchData.json();
-    console.log(data);
+
+    data.forEach((game) => {
+        searchableGames.push(game);
+    })
+    console.log(searchableGames);
 }
 
 function displaySearchedGames(searchGames) {
@@ -106,10 +111,15 @@ function displaySearchedGames(searchGames) {
 }
 
 const searchbar = document.getElementById('searchbar');
-searchbar.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        // const currentURL = window.location.href;
-        // console.log(currentURL);
-        window.location.href = "gamepage/" + searchbar.value;
-    }
+searchbar.addEventListener('keyup', () => {
+    let foundgamesByName = searchableGames.filter(e => e.name.toUpperCase().includes(searchbar.value.toUpperCase()));
+    let foundgamesByTag = searchableGames.filter(e => e.tag_name.toUpperCase().includes(searchbar.value.toUpperCase()));
+    let foundGames = foundgamesByTag
+    foundgamesByName.forEach((game) => {
+        if (!foundGames.includes(game)) {
+            foundGames.push(game);
+        }
+    })
+    console.log(foundGames);
+    displaySearchedGames(foundGames);
 });
