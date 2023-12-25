@@ -12,8 +12,7 @@
     <script defer src="{{ asset('js-lul/loginAndCreate.js') }}"></script>
 </head>
 <body>
-    <div class="center">
-
+    <div class="flexContainer">
         <div class="createForm" id="createForm">
 
             <label for="show" class="closebtn fas fa-times" title="close" onclick="closeCreate()"></label>
@@ -51,10 +50,7 @@
                         <label>Password Confirmation</label>
                         <input type="password" name="password_confirmation" required placeholder="Confirm password">
                     </div>
-                    <div class="create-account">
-                        <div class="create"></div>
-                        <button type="submit">Create Account</button>
-                    </div>
+                    <button id="createButton" type="submit">Create Account</button>
                 </form>
         </div>
     </div>
