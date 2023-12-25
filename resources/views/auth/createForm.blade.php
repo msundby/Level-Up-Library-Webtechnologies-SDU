@@ -31,20 +31,23 @@
 
                     <div class="data">
                         <label>Username</label>
-                        <input id="name" type="text" name="name" required placeholder="Enter username" value="{{ old('name') }}">
+                        <div class="input-container" data-tool-tip="Must be between 2-20 characters. Can only contain letters, numbers, hyphen, and underscore.">
+                            <input id="name" type="text" name="name" required placeholder="Enter username" value="{{ old('name') }}">
+                        </div>
                     </div>
                     <div class="data">
                         <label>Email</label>
-                        <input id="email" type="email" name="email" required placeholder="Enter email" value="{{ old('email') }}">
+                        <div class="input-container" data-tool-tip="Must be a valid email address.">
+                            <input id="email" type="email" name="email" required placeholder="Enter email" value="{{ old('email') }}">
+                        </div>
                     </div>
                     <div class="data">
                         <label>Password</label>
-                        <input type="password" name="password" required autocomplete="new-password" placeholder="Enter password">
-                        <div class="passrq">
-                            <label> • Passwords must be at least 8 characters</label>
+                        <div class="input-container" data-tool-tip="Must be at least 8 characters. Must contain at least one uppercase letter, one lowercase letter, and one number.">
+                            <input type="password" name="password" required autocomplete="new-password" placeholder="Enter password">
                         </div>
                     </div>
-                    <div id="gapForPassword" class="data">
+                    <div class="data">
                         <label>Password Confirmation</label>
                         <input type="password" name="password_confirmation" required placeholder="Confirm password">
                     </div>

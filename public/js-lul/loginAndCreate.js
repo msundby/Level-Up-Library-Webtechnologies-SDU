@@ -12,3 +12,4 @@ function closeCreate() {
 
     window.history.back();
 }
+

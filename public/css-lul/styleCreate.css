@@ -53,24 +53,45 @@ body{
 .createForm form .data{
     height: 45px;
     width: 100%;
-    margin: 40px 0 55px;
+    margin: 40px 0 70px;
 }
 
 form .data label{
     font-size: 20px;
     margin-left: 10px;
     margin-bottom: 20px;
+    position: relative;
 }
 
-form .data .passrq label{
-    font-size: 2px;
-    opacity: 0.5;
-
+form .data .input-container {
+    position: relative;
 }
 
-form .data input{
-    height: 100%;
+form .data .input-container::after {
+    content: attr(data-tool-tip);
+    display: block;
+    position: absolute;
+    background: #1e1e1e;
+    padding: 1em 3em;
+    color: white;
+    border-radius: 5px;
+    font-size: .75em;
+    bottom: 100%;
+    left: 0;
+    white-space: nowrap;
+    transform: scale(0);
+    transition: transform ease-out 150ms;
+}
+
+form .data .input-container:focus-within::after {
+    transform: scale(1);
+    bottom: 100%
+}
+
+form .data input {
+    height: 3rem;
     width: 100%;
+    box-sizing: border-box;
     font-size: 18px;
     border: 1px solid black;
     border-radius: 15px;
@@ -130,8 +151,4 @@ form .checkbox a{
     text-decoration: none;
     font-size: 15px;
     color: hsl(214, 100%, 56%)
-}
-
-#gapForPassword{
-    margin-top: 18%;
 }
