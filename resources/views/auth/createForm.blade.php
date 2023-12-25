@@ -18,13 +18,6 @@
             <label for="show" class="closebtn fas fa-times" title="close" onclick="closeCreate()"></label>
             <div class="text">Create Account</div>
 
-            @if ($errors->any())
-                <div id="validationMessage">
-            @foreach($errors->all() as $err)
-            <li style="color: red">{{$err}}</li>
-            @endforeach
-                </div>
-            @endif
                 <form method ="POST" action="{{ route('register') }}">
                     @csrf
 
@@ -32,18 +25,33 @@
                         <label>Username</label>
                         <div class="input-container" data-tool-tip="Must be between 2-20 characters. Can only contain letters, numbers, hyphen, and underscore.">
                             <input id="name" type="text" name="name" required placeholder="Enter username" value="{{ old('name') }}">
+                            <div class="errorDiv">
+                                @foreach($errors->get('name') as $err)
+                                    <p class="errorMessage">{{ $err }}</p>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                     <div class="data">
                         <label>Email</label>
                         <div class="input-container" data-tool-tip="Must be a valid email address.">
                             <input id="email" type="email" name="email" required placeholder="Enter email" value="{{ old('email') }}">
+                            <div class="errorDiv">
+                                @foreach($errors->get('email') as $err)
+                                    <p class="errorMessage">{{ $err }}</p>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                     <div class="data">
                         <label>Password</label>
                         <div class="input-container" data-tool-tip="Must be at least 8 characters. Must contain at least one uppercase letter, one lowercase letter, and one number.">
                             <input type="password" name="password" required autocomplete="new-password" placeholder="Enter password">
+                            <div class="errorDiv">
+                                @foreach($errors->get('password') as $err)
+                                    <p class="errorMessage">{{ $err }}</p>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                     <div class="data">
