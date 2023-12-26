@@ -35,7 +35,7 @@ class RegisteredUserController extends Controller
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::min(8)->mixedCase()->numbers()],
         ], [
-            'name.regex' => 'The name must not contain any symbols besides - or _'
+            'name.regex' => 'The name must not contain any symbols besides hyphen or underscore.'
         ]);
 
         $user = User::create([
