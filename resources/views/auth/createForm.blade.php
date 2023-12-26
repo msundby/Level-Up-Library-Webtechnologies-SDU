@@ -20,7 +20,6 @@
 
                 <form method ="POST" action="{{ route('register') }}">
                     @csrf
-
                     <div class="data">
                         <label>Username</label>
                         <div class="input-container" data-tool-tip="Must be between 2-20 characters. Can only contain letters, numbers, hyphen, and underscore.">
