@@ -219,11 +219,11 @@ p.featured-snippet {
     padding-bottom: 35%;
     margin-top: -6%;
     font-size: 95%;
-    overflow: hidden; /* Gemmer væk alt det der flyder udover containeren*/
-    display: -webkit-box; /*Til chrome og safari, denne linje gør at man kan bruge de næste 2 linjer*/
-    -webkit-line-clamp: 3; /* Bestemmer hvor mange linjer der er tilladt før (...) */
-    -webkit-box-orient: vertical; /* Gør at ekstra tekst bevæger sig nedad på næste linje*/
-    word-wrap: break-word; /*Hvis ordet er for stort bevæger det sig ned på næste linje */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
 }
 
 .container-title{

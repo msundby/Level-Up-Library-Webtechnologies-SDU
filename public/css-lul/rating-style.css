@@ -64,7 +64,6 @@ body{
 }
 
 #content {
-    /* for some reason this text area has to be manually display flex */
     resize: none;
     display: flex;
 }
@@ -138,5 +137,5 @@ body{
 .textContent {
     resize: none;
     display: block;
-    min-height: 200px; /* or any other value */
+    min-height: 200px;
 }
