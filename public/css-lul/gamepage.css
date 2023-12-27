@@ -177,3 +177,10 @@ button:hover{
 .fetching_skeleton {
     margin-left: 1%;
 }
+
+.game_buttons {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    margin: auto;
+}
