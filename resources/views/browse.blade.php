@@ -23,9 +23,9 @@
 <div class="filter-links">
 <a class="filter-a" href="{{ route('games.browse', ['sort' => 'name','search' => request('search')]) }}">Sort by Name (A-Z)</a>
 <a class ="filter-a" href="{{ route('games.browse', ['sort' => 'aggregate_rating','order' => 'desc','search' => request('search')]) }}">Sort by Rating (Highest)</a>
-<a class ="filter-a" href="{{ route('games.browse', ['sort' => 'aggregate_rating','order' => 'asc','search' => request('search')]) }}">Sort by Rating (Lowest)</a>
+<a class ="filter-a" href="{{ route('games.browse', ['sort' => 'aggregate_rating','search' => request('search')]) }}">Sort by Rating (Lowest)</a>
 <a class="filter-a" href="{{ route('games.browse', ['sort' => 'release_date', 'order' => 'desc','search' => request('search')]) }}">Sort by Release Date (Newest)</a>
-<a class="filter-a" href="{{ route('games.browse', ['sort' => 'release_date', 'order' => 'asc','search' => request('search')]) }}">Sort by Release Date (Oldest)</a>
+<a class="filter-a" href="{{ route('games.browse', ['sort' => 'release_date','search' => request('search')]) }}">Sort by Release Date (Oldest)</a>
 </div>
 
 <div id="allgames">
