@@ -10,7 +10,7 @@ function deleteReview(reviewId) {
         .then(response => {
             if (response.ok) {
                 document.getElementById(reviewId + "div").remove();
-
+                location.reload();
                 console.log(`Review with ID ${reviewId} deleted successfully.`);
             } else {
 
