@@ -17,6 +17,7 @@
 <section class="hero">
     <h1>Welcome to the Ultimate Game Library</h1>
     <h2>Discover new games, read reviews, and level up your gaming experience!</h2>
+    @guest
     <div id="action_buttons">
     <a href="browse">
       <button id="get_started">
@@ -29,6 +30,7 @@
       </button>
     </a>
     </div>
+    @endguest
 </section>
 </div>
 
