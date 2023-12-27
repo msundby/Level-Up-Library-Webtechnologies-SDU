@@ -116,3 +116,20 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.alert-success-box {                                        /* Extension */
+    position: fixed;                                        /* Extension */
+    top: 1rem;                                              /* Extension */
+    left: 50%;                                              /* Extension */
+    display: flex;                                          /* Extension */
+    align-items: center;                                    /* Extension */
+    justify-content: center;                                /* Extension */
+    width: 20rem;                                           /* Extension */
+    padding: 0.7rem;                                        /* Extension */
+    background-color: #4CAF50;                              /* Extension */
+    color: white;                                           /* Extension */
+    text-align: center;                                     /* Extension */
+    border-radius: 0.8rem;                                  /* Extension */
+    border: 0.2rem solid #45a049;                           /* Extension */
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);         /* Extension */
+    margin-left: -10rem;                                    /* Extension */
+}

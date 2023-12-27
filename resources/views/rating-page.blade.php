@@ -19,8 +19,9 @@
         <div class="review_form">
             <form id="submit_form" action="review" method="POST">
                 @csrf
-                <p>Title</p>
-                <input type="text" id="title" name="title" placeholder="A fancy title?" maxlength="255">
+                <p>Title<span class="red_highlight">*</span></p>                                                                            <!-- Extension -->
+                <!--<input type="text" id="title" name="title" placeholder="A fancy title?" maxlength="255">-->
+                <input type="text" id="title" name="title" placeholder="A fancy title?" maxlength="255" value="{{ old('title') }}">         <!-- Extension - Using 'old' Helper function  -->
                 <p>Platform</p>
                 <select id="platform" name="platform">
                     <option value="PS4">PS4</option>
@@ -29,9 +30,10 @@
                     <option value="XboxOne">Xbox One</option>
                     <option value="PC">PC</option>
                 </select>
-                <p>Content</p>
-                <textarea name="content" id="content" type="text" rows="5" cols="33" maxlength="255" class="textContent" placeholder="Write your review..."></textarea>
-                <p id="characterCounter">0/255 characters</p>                        <!-- Extension -->
+                <p>Content<span class="red_highlight">*</span></p>                                                                          <!-- Extension -->
+                <textarea name="content" id="content" type="text" rows="5" cols="33" maxlength="255"
+                          class="textContent" placeholder="Write your review...">{{ old('content') }}</textarea>                            <!-- Extension - Using 'old' Helper function  -->
+                <p id="characterCounter">0/255 characters</p>                                                                               <!-- Extension -->
                 <p>Rating<span class="red_highlight">*</span></p>
                 <select id="rating" name="rating">
                     <option value="1">1</option>
@@ -43,15 +45,16 @@
                 <input id="review_submit" type="submit" value="Submit">
             </form>
         </div>
-        @if ($errors -> any())                                                      <!-- Extension -->
-        <div>                                                                       <!-- Extension -->
-            @foreach ($errors->all() as $error)                                     <!-- Extension -->
-            <li style="list-style-type: none; color: red">                          <!-- Extension -->
-                {{ $error }}                                                        <!-- Extension -->
-            </li>                                                                   <!-- Extension -->
-            @endforeach                                                             <!-- Extension -->
-        </div>                                                                      <!-- Extension -->
-        @endif                                                                      <!-- Extension -->
+        @if ($errors -> any())                                                                                                              <!-- Extension -->
+        <div>                                                                                                                               <!-- Extension -->
+            @foreach ($errors->all() as $error)                                                                                             <!-- Extension -->
+            <li style="list-style-type: none; color: red">                                                                                  <!-- Extension -->
+                {{ $error }}                                                                                                                <!-- Extension -->
+            </li>                                                                                                                           <!-- Extension -->
+            @endforeach                                                                                                                     <!-- Extension -->
+        </div>                                                                                                                              <!-- Extension -->
+        @endif                                                                                                                              <!-- Extension -->
+
     </div>
     <div class="headline">
         <div class="headline_image">

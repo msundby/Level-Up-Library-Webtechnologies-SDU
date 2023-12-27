@@ -10,6 +10,16 @@
 </head>
     <header>
         @include('nav-bar')
+        @if(session('success'))                                                             <!-- Extension -->
+        <div class="alert alert-success-box" id="alertSuccessBox">                          <!-- Extension -->
+            {{ session('success') }}                                                        <!-- Extension -->
+        </div>                                                                              <!-- Extension -->
+        <script>                                                                            <!-- Extension -->
+            setTimeout(function() {                                                         <!-- Extension -->
+                document.getElementById('alertSuccessBox').style.display = 'none';          <!-- Extension -->
+            }, 5000);                                                                       <!-- Extension -->
+        </script>                                                                           <!-- Extension -->
+        @endif                                                                              <!-- Extension -->
     </header>
 <body>
 <img id="loading" src="{{ asset('img/LoadSlot.gif') }}">

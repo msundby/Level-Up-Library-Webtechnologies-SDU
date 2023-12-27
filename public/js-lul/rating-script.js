@@ -36,16 +36,17 @@ const myForm= document.getElementById("submit_form");
 })
 
 
-const textarea = document.getElementById('content');       // Extension
-const characterCounter = document.getElementById('characterCounter');    // Extension
-textarea.addEventListener("input", function() {                 // Extension
-    const currentChars = textarea.value.length;                                  // Extension
-    characterCounter.textContent = `${currentChars}/255 characters`;                    // Extension
-    if (currentChars === 255){                                                   // Extension
-        characterCounter.style.color = "red";                                           // Extension
-    }                                                                            // Extension
-    else {                                                                       // Extension
-        characterCounter.style.color = "black";                                         // Extension
-    }                                                                            // Extension
-})                                                                               // Extension
+const textarea = document.getElementById('content');                      // Extension
+const characterCounter = document.getElementById('characterCounter');     // Extension
+textarea.addEventListener("input", function() {                               // Extension
+    const currentChars = textarea.value.length;                                                 // Extension
+    characterCounter.textContent = `${currentChars}/255 characters`;                            // Extension
+    if (currentChars === 255){                                                                  // Extension
+        characterCounter.style.color = "red";                                                   // Extension
+    }                                                                                           // Extension
+    else {                                                                                      // Extension
+        characterCounter.style.color = "black";                                                 // Extension
+    }                                                                                           // Extension
+})                                                                                              // Extension
+
 
