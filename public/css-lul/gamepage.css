@@ -147,16 +147,18 @@ img {
 }
 
 .review-page-button {
+    display: flex;
+    justify-content: center;
     font-family: Helvetica, sans-serif;
     font-size: 0.9em;
     text-align: center;
     margin: auto;
-    display: block;
     background-color: #FA7921;
     color: #EFF2F1;
     border-style: none;
     padding: 0.8rem;
     border-radius: 0.2rem;
+    margin-bottom: 1%;
 }
 
 button:hover{
