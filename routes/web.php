@@ -25,7 +25,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [GameController::class, 'welcomeOurFavorites'])
     ->name('home');
 
+// ADMIN ROUTES
+Route::middleware(['auth', 'admin'])->group(function() {
+    Route::get('/admin/games',[App\Http\Controllers\GameController::class, 'indexWithView'])
+        ->name('admin.games');
 
+});
+
+// Tilføj til admin routes
+Route::delete('/game/{game_id}', [GameController::class, 'destroy']);
+Route::put('/game/{game_id}', [GameController::class, 'update']);
+Route::post('/game', [GameController::class, 'store']);
 
 /*API calls
 Key takeaway: returns data instead of a view

@@ -25,5 +25,8 @@ class DatabaseSeeder extends Seeder
         Studio::factory()->create([
             'name' => 'Rockstar Games',
         ]);
+
+        // Execute the run() from the AdminSeeder
+        $this->call(AdminSeeder::class);
     }
 }

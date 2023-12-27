@@ -73,3 +73,39 @@
     display: block;
     min-height: 200px; /* or any other value */
 }
+
+/* For the individual extension of admin users */
+
+.all_games {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    padding: 2%;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 4%;
+}
+
+.game_image {
+    aspect-ratio: 1 / 1;
+    height: 50%;
+    width: 50%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    cursor: pointer;
+    align-self: center;
+}
+
+.game_title {
+    font-weight: bolder;
+}
+
+.btns {
+    flex: 1;
+    text-align: center;
+}

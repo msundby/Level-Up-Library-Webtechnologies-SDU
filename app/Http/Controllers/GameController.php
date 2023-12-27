@@ -6,6 +6,7 @@ use App\Models\Game;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class GameController extends Controller
 {
@@ -27,12 +28,11 @@ class GameController extends Controller
         return Game::all();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    /** Index with view */
+    public function indexWithView()
     {
-        //
+        $games = Game::all();
+        return view('admin.games',['games' => $games]);
     }
 
     /**
@@ -40,7 +40,14 @@ class GameController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'image_link' => 'required',
+            'release_date' => 'required'
+        ]);
+        Game::create($validatedData);
+        return redirect('/dashboard');
     }
 
     /**
@@ -79,7 +86,10 @@ class GameController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+
+        // TODO Validation
+        $game = Game::findOrFail($id);
+        $game->update($request->json()->all());
     }
 
     /**
@@ -87,7 +97,7 @@ class GameController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Game::where('game_id', $id)->first()->delete();
     }
 
 

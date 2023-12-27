@@ -30,6 +30,10 @@ class User extends Authenticatable
         return $this->hasMany(Review::class);
     }
 
+    public function isAdmin()
+    {
+        return $this->attributes['is_admin'] ?? false;
+    }
 
     /**
      * The attributes that should be hidden for serialization.

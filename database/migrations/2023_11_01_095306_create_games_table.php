@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('image_link');
-            $table->float('aggregate_rating');
+            $table->float('aggregate_rating')->default(0);
             $table->date('release_date');
             $table->timestamps(); //Automatically creates a 'created on' and 'updated-at'
 

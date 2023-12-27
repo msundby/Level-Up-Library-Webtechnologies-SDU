@@ -30,6 +30,14 @@ class Game extends Model
 //        return $this->belongsToMany(Platform::class);
 //    }
 
+    protected $fillable = [
+        'name',
+        'description',
+        'image_link',
+        'release_date',
+        'aggregate_rating'
+    ];
+
     protected $table = "games";
 
     protected $primaryKey = 'game_id';

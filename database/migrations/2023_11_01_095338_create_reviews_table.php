@@ -17,7 +17,9 @@ return new class extends Migration
             $table->integer('game_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('game_id')->references('game_id')->on('games');
-            $table->string('description');
+            $table->text('title');
+            $table->text('platform');
+            $table->string('content');
             $table->float('rating');
             $table->timestamps();
 
