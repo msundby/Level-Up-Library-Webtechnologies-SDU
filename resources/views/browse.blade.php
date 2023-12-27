@@ -39,7 +39,7 @@
                 <h3 id="featured-title"><a id="titleLink" style="text-decoration: none; color: inherit;" href="/gamepage/{{$game->name}}">{{$game->name}}</a></h3>
                 <p id="featured-snippet">{{$game->description}}</p>
                 <div id="rating">
-                    <h3>{{$game->aggregate_rating}} / 5<label id="rating"></label></h3>
+                    <h3>{{ number_format($game->aggregate_rating, 1) }} / 5<label id="rating"></label></h3>
                 </div>
             </div>
         </div>
